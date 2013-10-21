@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessTransactions" table="business_transactions">
+    <id name="transactionid" type="bigint" column="transactionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="transactiontype" type="string" column="transactionType" nullable="true"/>
+    <field name="transactiongroup" type="string" column="transactionGroup" nullable="true"/>
+    <field name="businessid" type="bigint" column="businessID" nullable="true"/>
+    <field name="transactiondescription" type="text" column="transactionDescription" nullable="true"/>
+    <field name="transactionsubtotalamount" type="decimal" column="transactionSubTotalAmount" nullable="true"/>
+    <field name="transactioncommissionamount" type="decimal" column="transactionCommissionAmount" nullable="true"/>
+    <field name="transactionpaymentgatewaycharge" type="decimal" column="transactionPaymentGatewayCharge" nullable="true"/>
+    <field name="transactionotherservicecharge" type="decimal" column="transactionOtherServiceCharge" nullable="true"/>
+    <field name="transactiongrandtotalamount" type="decimal" column="transactionGrandTotalAmount" nullable="true"/>
+    <field name="transactiondate" type="datetime" column="transactionDate" nullable="true"/>
+    <field name="transactiondescrforbusiness" type="text" column="transactionDescrForBusiness" nullable="false"/>
+    <field name="transactionviewed" type="string" column="transactionViewed" nullable="false"/>
+  </entity>
+</doctrine-mapping>

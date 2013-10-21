@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VisitorUrlLog" table="visitor_url_log">
+    <id name="urlid" type="integer" column="urlID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="visitorid" type="integer" column="visitorID" nullable="false"/>
+    <field name="currenturl" type="string" column="currentUrl" length="765" nullable="false"/>
+    <field name="refererurl" type="string" column="refererUrl" length="765" nullable="false"/>
+    <field name="visittime" type="datetime" column="visitTime" nullable="false"/>
+  </entity>
+</doctrine-mapping>

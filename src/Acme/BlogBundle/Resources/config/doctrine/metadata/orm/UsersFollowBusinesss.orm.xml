@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UsersFollowBusinesss" table="users_follow_businesss">
+    <id name="followid" type="integer" column="followID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="followdate" type="datetime" column="followDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

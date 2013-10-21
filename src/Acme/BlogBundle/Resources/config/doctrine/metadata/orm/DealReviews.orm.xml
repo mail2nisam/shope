@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealReviews" table="deal_reviews">
+    <id name="dealreviewid" type="integer" column="DealReviewID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="reviewtext" type="text" column="reviewText" nullable="false"/>
+    <field name="reviweddate" type="datetime" column="reviwedDate" nullable="false"/>
+    <field name="reviewstatus" type="string" column="reviewStatus" nullable="false"/>
+    <field name="updateddate" type="datetime" column="updatedDate" nullable="false"/>
+    <field name="approvedby" type="integer" column="approvedBy" nullable="false"/>
+    <field name="reviewfollow" type="string" column="reviewFollow" nullable="false"/>
+  </entity>
+</doctrine-mapping>

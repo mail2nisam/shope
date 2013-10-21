@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessPayments" table="business_payments">
+    <id name="businesstransid" type="integer" column="businessTransID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="adminuserid" type="integer" column="adminUserID" nullable="false"/>
+    <field name="businesstransdescription" type="text" column="businessTransDescription" nullable="false"/>
+    <field name="businesstransdate" type="datetime" column="businessTransDate" nullable="false"/>
+    <field name="totalamount" type="decimal" column="totalAmount" nullable="false"/>
+    <field name="commission" type="decimal" column="commission" nullable="false"/>
+    <field name="servicefee" type="decimal" column="serviceFee" nullable="false"/>
+    <field name="cccharges" type="decimal" column="ccCharges" nullable="false"/>
+    <field name="otherdeduction" type="decimal" column="otherDeduction" nullable="false"/>
+    <field name="transactionamount" type="decimal" column="transactionAmount" nullable="false"/>
+    <field name="transactionstatus" type="string" column="transactionStatus" nullable="false"/>
+    <field name="transactiontype" type="string" column="transactionType" nullable="false"/>
+  </entity>
+</doctrine-mapping>

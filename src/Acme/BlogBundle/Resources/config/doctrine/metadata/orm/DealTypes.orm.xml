@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealTypes" table="deal_types">
+    <id name="dealtypeid" type="integer" column="dealTypeID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="paymentcollection" type="string" column="paymentCollection" nullable="false"/>
+    <field name="certficategenerate" type="string" column="certficateGenerate" nullable="false"/>
+    <field name="dealtypeposition" type="integer" column="dealTypePosition" nullable="false"/>
+    <field name="dealtypestatus" type="string" column="dealTypeStatus" nullable="false"/>
+    <field name="isfeatured" type="string" column="isFeatured" nullable="false"/>
+    <field name="featuredlink" type="integer" column="featuredLink" nullable="true"/>
+    <field name="dealtypekey" type="string" column="dealTypeKey" length="40" nullable="false"/>
+    <field name="lockedstatus" type="string" column="lockedStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

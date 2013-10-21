@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UsersCcInfo" table="users_cc_info">
+    <id name="userccid" type="integer" column="UserCcID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="nameoncard" type="string" column="nameonCard" length="200" nullable="false"/>
+    <field name="cardtype" type="string" column="cardType" length="100" nullable="false"/>
+    <field name="cardnumber" type="string" column="cardNumber" length="500" nullable="false"/>
+    <field name="expmonth" type="boolean" column="expMonth" nullable="false"/>
+    <field name="expyear" type="integer" column="expYear" nullable="false"/>
+    <field name="addeddate" type="datetime" column="addedDate" nullable="false"/>
+    <field name="securitycode" type="string" column="securityCode" length="4" nullable="false"/>
+  </entity>
+</doctrine-mapping>

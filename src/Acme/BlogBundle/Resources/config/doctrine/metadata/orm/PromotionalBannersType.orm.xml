@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PromotionalBannersType" table="promotional_banners_type">
+    <id name="bannertypeid" type="integer" column="bannerTypeID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="bannertypeposition" type="string" column="bannerTypePosition" length="200" nullable="false"/>
+    <field name="bannertypewidth" type="integer" column="bannerTypeWidth" nullable="false"/>
+    <field name="bannertypeheight" type="integer" column="bannerTypeHeight" nullable="false"/>
+    <field name="bannertypestatus" type="string" column="bannerTypeStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

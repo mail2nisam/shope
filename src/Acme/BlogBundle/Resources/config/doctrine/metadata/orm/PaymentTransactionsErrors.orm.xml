@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PaymentTransactionsErrors" table="payment_transactions_errors">
+    <id name="paymenttransactionid" type="integer" column="paymentTransactionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="transactionid" type="text" column="transactionID" nullable="true"/>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="completeddate" type="datetime" column="completedDate" nullable="false"/>
+    <field name="extra" type="text" column="extra" nullable="true"/>
+    <field name="paymenttype" type="string" column="paymentType" length="100" nullable="true"/>
+    <field name="paymentgateway" type="string" column="paymentGateway" length="100" nullable="true"/>
+    <field name="paymentresponse" type="text" column="paymentResponse" nullable="true"/>
+    <field name="ordersubtotal" type="decimal" column="orderSubTotal" nullable="true"/>
+    <field name="ordertotal" type="decimal" column="orderTotal" nullable="true"/>
+    <field name="taxamount" type="decimal" column="taxAmount" nullable="true"/>
+  </entity>
+</doctrine-mapping>

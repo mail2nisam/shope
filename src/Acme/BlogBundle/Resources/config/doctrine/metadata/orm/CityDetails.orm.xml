@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CityDetails" table="city_details">
+    <id name="citydetailsid" type="integer" column="cityDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cityid" type="integer" column="cityID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="cityname" type="string" column="cityName" length="50" nullable="false"/>
+    <field name="province" type="string" column="province" length="100" nullable="false"/>
+    <field name="ndsId" type="integer" column="nds_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

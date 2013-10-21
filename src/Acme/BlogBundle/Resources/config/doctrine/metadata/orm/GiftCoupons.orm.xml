@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="GiftCoupons" table="gift_coupons">
+    <id name="couponid" type="integer" column="couponID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="giftfromname" type="string" column="giftFromName" length="126" nullable="true"/>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="couponto" type="string" column="couponTo" length="200" nullable="false"/>
+    <field name="redeemedby" type="integer" column="redeemedBy" nullable="true"/>
+    <field name="couponmessage" type="text" column="couponMessage" nullable="false"/>
+    <field name="couponcode" type="string" column="couponCode" length="200" nullable="false"/>
+    <field name="couponamount" type="decimal" column="couponAmount" nullable="false"/>
+    <field name="couponemailto" type="string" column="couponEmailTo" length="200" nullable="false"/>
+    <field name="couponstatus" type="string" column="couponStatus" nullable="false"/>
+    <field name="sendmode" type="string" column="sendMode" nullable="false"/>
+    <field name="giftemailtemplateid" type="integer" column="giftEmailTemplateID" nullable="true"/>
+    <field name="couponexpiry" type="datetime" column="couponExpiry" nullable="false"/>
+    <field name="redeemeddate" type="datetime" column="redeemedDate" nullable="true"/>
+    <field name="pdfdata" type="blob" column="pdfData" nullable="false"/>
+  </entity>
+</doctrine-mapping>

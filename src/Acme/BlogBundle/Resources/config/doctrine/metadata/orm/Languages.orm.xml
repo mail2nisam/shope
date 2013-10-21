@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Languages" table="languages">
+    <id name="languageid" type="integer" column="languageID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="languagename" type="string" column="languageName" length="32" nullable="false"/>
+    <field name="languagecode" type="string" column="languageCode" length="4" nullable="false"/>
+    <field name="languagelcidstring" type="string" column="LanguageLCIDstring" length="5" nullable="false"/>
+    <field name="languagelocale" type="string" column="languageLocale" length="255" nullable="false"/>
+    <field name="languageimage" type="string" column="languageImage" length="64" nullable="false"/>
+    <field name="languagesortorder" type="integer" column="languageSortOrder" nullable="false"/>
+    <field name="languagestatus" type="string" column="languageStatus" nullable="false"/>
+    <field name="languagedefault" type="string" column="languageDefault" nullable="false"/>
+  </entity>
+</doctrine-mapping>

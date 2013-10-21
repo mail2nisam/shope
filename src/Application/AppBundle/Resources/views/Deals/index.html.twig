@@ -1,0 +1,113 @@
+<html>
+    <body>
+<h1>Deals list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Istaxable</th>
+            <th>Taxclassid</th>
+            <th>Taxrate</th>
+            <th>Dealkey</th>
+            <th>Dealtitle</th>
+            <th>Dealcertificatetitle</th>
+            <th>Dealfineprint</th>
+            <th>Dealhighlights</th>
+            <th>Dealdescription</th>
+            <th>Dealreviews</th>
+            <th>Certificateinstructions</th>
+            <th>Dealmetatitle</th>
+            <th>Dealmetadescription</th>
+            <th>Dealmetakeywords</th>
+            <th>Dealbusinesslocations</th>
+            <th>Dealtimezone</th>
+            <th>Dealstarttime</th>
+            <th>Dealendtime</th>
+            <th>Dealminbuylimit</th>
+            <th>Dealmaxgiftbuy</th>
+            <th>Dealmaxbuylimit</th>
+            <th>Dealminqntyreqtotipp</th>
+            <th>Dealexpirydate</th>
+            <th>Dealcommissionrate</th>
+            <th>Dealuseglobalcommision</th>
+            <th>Dealcommissiontype</th>
+            <th>Dealservicefee</th>
+            <th>Dealshownosbought</th>
+            <th>Dealshowdealtipped</th>
+            <th>Dealonlineredemption</th>
+            <th>Dealimage</th>
+            <th>Dealpriority</th>
+            <th>Dealstatus</th>
+            <th>Inventorytracklevel</th>
+            <th>Dealcreateddate</th>
+            <th>Dealtippeddate</th>
+            <th>Shippingstatus</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('product_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.istaxable }}</td>
+            <td>{{ entity.taxclassid }}</td>
+            <td>{{ entity.taxrate }}</td>
+            <td>{{ entity.dealkey }}</td>
+            <td>{{ entity.dealtitle }}</td>
+            <td>{{ entity.dealcertificatetitle }}</td>
+            <td>{{ entity.dealfineprint }}</td>
+            <td>{{ entity.dealhighlights }}</td>
+            <td>{{ entity.dealdescription }}</td>
+            <td>{{ entity.dealreviews }}</td>
+            <td>{{ entity.certificateinstructions }}</td>
+            <td>{{ entity.dealmetatitle }}</td>
+            <td>{{ entity.dealmetadescription }}</td>
+            <td>{{ entity.dealmetakeywords }}</td>
+            <td>{{ entity.dealbusinesslocations }}</td>
+            <td>{{ entity.dealtimezone }}</td>
+            <td>{% if entity.dealstarttime %}{{ entity.dealstarttime|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.dealendtime %}{{ entity.dealendtime|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.dealminbuylimit }}</td>
+            <td>{{ entity.dealmaxgiftbuy }}</td>
+            <td>{{ entity.dealmaxbuylimit }}</td>
+            <td>{{ entity.dealminqntyreqtotipp }}</td>
+            <td>{% if entity.dealexpirydate %}{{ entity.dealexpirydate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.dealcommissionrate }}</td>
+            <td>{{ entity.dealuseglobalcommision }}</td>
+            <td>{{ entity.dealcommissiontype }}</td>
+            <td>{{ entity.dealservicefee }}</td>
+            <td>{{ entity.dealshownosbought }}</td>
+            <td>{{ entity.dealshowdealtipped }}</td>
+            <td>{{ entity.dealonlineredemption }}</td>
+            <td>{{ entity.dealimage }}</td>
+            <td>{{ entity.dealpriority }}</td>
+            <td>{{ entity.dealstatus }}</td>
+            <td>{{ entity.inventorytracklevel }}</td>
+            <td>{% if entity.dealcreateddate %}{{ entity.dealcreateddate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.dealtippeddate %}{{ entity.dealtippeddate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.shippingstatus }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('product_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('product_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('product_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+    </body>
+</html>

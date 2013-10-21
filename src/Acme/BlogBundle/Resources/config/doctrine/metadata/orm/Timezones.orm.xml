@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Timezones" table="timezones">
+    <id name="timezoneid" type="integer" column="timeZoneID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="timezonename" type="string" column="timeZoneName" length="200" nullable="false"/>
+    <field name="timezonedetail" type="string" column="timeZoneDetail" length="200" nullable="false"/>
+    <field name="timezoneabbreviation" type="string" column="timeZoneAbbreviation" length="10" nullable="false"/>
+    <field name="timezonediff" type="string" column="timeZoneDiff" length="10" nullable="true"/>
+    <field name="timezonediffdst" type="string" column="timeZoneDiffDST" length="10" nullable="true"/>
+    <field name="timezonediffdefault" type="string" column="timeZoneDiffDefault" length="10" nullable="true"/>
+    <field name="countryid" type="integer" column="countryID" nullable="true"/>
+    <field name="daylightsavingsdiff" type="string" column="daylightSavingsDiff" length="10" nullable="false"/>
+    <field name="dststartdate" type="string" column="dstStartDate" length="255" nullable="true"/>
+    <field name="dstenddate" type="string" column="dstEndDate" length="255" nullable="true"/>
+    <field name="priority" type="integer" column="priority" nullable="true"/>
+  </entity>
+</doctrine-mapping>

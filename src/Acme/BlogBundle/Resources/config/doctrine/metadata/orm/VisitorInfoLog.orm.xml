@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VisitorInfoLog" table="visitor_info_log">
+    <id name="visitorid" type="integer" column="visitorID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="entrypage" type="string" column="entryPage" length="765" nullable="false"/>
+    <field name="entrytime" type="datetime" column="entryTime" nullable="false"/>
+    <field name="exitpage" type="string" column="exitPage" length="765" nullable="false"/>
+    <field name="exittime" type="datetime" column="exitTime" nullable="false"/>
+    <field name="useragent" type="string" column="userAgent" length="765" nullable="false"/>
+    <field name="browsername" type="string" column="browserName" length="765" nullable="false"/>
+    <field name="operatingsystem" type="string" column="operatingSystem" length="765" nullable="false"/>
+    <field name="httpreferer" type="string" column="httpReferer" length="765" nullable="false"/>
+    <field name="remoteaddress" type="string" column="remoteAddress" length="765" nullable="false"/>
+    <field name="serveraddress" type="string" column="serverAddress" length="765" nullable="false"/>
+    <field name="userid" type="string" column="userID" length="11" nullable="false"/>
+    <field name="logintime" type="datetime" column="loginTime" nullable="false"/>
+    <field name="logouttime" type="datetime" column="logoutTime" nullable="false"/>
+    <field name="usertype" type="string" column="userType" length="125" nullable="false"/>
+    <field name="searchkeyword" type="string" column="searchKeyWord" length="200" nullable="false"/>
+    <field name="searchenginename" type="string" column="searchEngineName" length="175" nullable="false"/>
+    <field name="orderplaced" type="integer" column="orderPlaced" nullable="false"/>
+    <field name="orderamount" type="decimal" column="orderAmount" nullable="false"/>
+    <field name="donesubscribe" type="integer" column="doneSubscribe" nullable="false"/>
+    <field name="donesignup" type="integer" column="doneSignUp" nullable="false"/>
+    <field name="usersex" type="string" column="userSex" nullable="false"/>
+    <field name="userage" type="string" column="userAge" length="25" nullable="false"/>
+    <field name="pagecount" type="integer" column="pageCount" nullable="false"/>
+    <field name="city" type="string" column="city" length="765" nullable="false"/>
+    <field name="country" type="string" column="country" length="175" nullable="false"/>
+    <field name="referrertype" type="string" column="referrerType" length="150" nullable="false"/>
+    <field name="referrerwebsite" type="string" column="referrerWebSite" length="125" nullable="false"/>
+    <field name="widgetid" type="integer" column="widgetID" nullable="false"/>
+    <field name="ismobileweb" type="string" column="isMobileWeb" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EmailTemplateSectons" table="email_template_sectons">
+    <id name="emailtempsecid" type="integer" column="emailTempSecID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="sectionname" type="string" column="sectionName" length="127" nullable="false"/>
+    <field name="sectionuniquestring" type="string" column="sectionUniqueString" length="127" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="sectioncontent" type="text" column="sectionContent" nullable="false"/>
+    <field name="sectionstatus" type="string" column="sectionStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

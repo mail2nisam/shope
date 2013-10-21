@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="StandardCurrencies" table="standard_currencies">
+    <id name="standardcurrencyid" type="integer" column="standardCurrencyID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="standardcurrencyname" type="string" column="standardCurrencyName" length="255" nullable="false"/>
+    <field name="standardcurrencycode" type="string" column="standardCurrencyCode" length="255" nullable="false"/>
+    <field name="standardcurrencysymbolleft" type="string" column="standardCurrencySymbolLeft" length="100" nullable="false"/>
+    <field name="standardcurrencysymbolright" type="string" column="standardCurrencySymbolRight" length="100" nullable="false"/>
+  </entity>
+</doctrine-mapping>

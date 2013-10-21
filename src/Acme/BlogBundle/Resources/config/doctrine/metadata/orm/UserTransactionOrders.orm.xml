@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UserTransactionOrders" table="user_transaction_orders">
+    <id name="ordertransid" type="integer" column="orderTransID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="usertransactionid" type="integer" column="userTransactionID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

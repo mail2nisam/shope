@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Editor" table="editor">
+    <id name="int" type="bigint" column="int">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="editor" type="string" column="editor" length="50" nullable="false"/>
+    <field name="mode" type="string" column="mode" length="255" nullable="false"/>
+    <field name="skin" type="integer" column="skin" nullable="false"/>
+    <field name="selector" type="string" column="selector" length="10" nullable="false"/>
+    <field name="location" type="string" column="location" length="10" nullable="false"/>
+    <field name="align" type="string" column="align" length="10" nullable="false"/>
+    <field name="statusBar" type="string" column="status_bar" length="10" nullable="false"/>
+    <field name="fonts" type="string" column="fonts" length="10" nullable="false"/>
+    <field name="paste" type="string" column="paste" length="10" nullable="false"/>
+    <field name="searchReplace" type="string" column="search_replace" length="10" nullable="false"/>
+    <field name="insertDate" type="string" column="insert_date" length="10" nullable="false"/>
+    <field name="dateFormat" type="string" column="date_format" length="250" nullable="false"/>
+    <field name="insertTime" type="string" column="insert_time" length="10" nullable="false"/>
+    <field name="timeFormat" type="string" column="time_format" length="250" nullable="false"/>
+    <field name="colours" type="string" column="colours" length="10" nullable="false"/>
+    <field name="table" type="string" column="table" length="10" nullable="false"/>
+    <field name="smileys" type="string" column="smileys" length="10" nullable="false"/>
+    <field name="media" type="string" column="media" length="10" nullable="false"/>
+    <field name="horizontalRule" type="string" column="horizontal_rule" length="10" nullable="false"/>
+    <field name="directionality" type="string" column="directionality" length="10" nullable="false"/>
+    <field name="fullscreen" type="string" column="fullscreen" length="10" nullable="false"/>
+    <field name="style" type="string" column="style" length="10" nullable="false"/>
+    <field name="layer" type="string" column="layer" length="10" nullable="false"/>
+    <field name="xhtmlExtras" type="string" column="xhtml_extras" length="10" nullable="false"/>
+    <field name="visualChars" type="string" column="visual_chars" length="10" nullable="false"/>
+    <field name="nonBreaking" type="string" column="non_breaking" length="10" nullable="false"/>
+    <field name="blockQuote" type="string" column="block_quote" length="10" nullable="false"/>
+    <field name="template" type="string" column="template" length="10" nullable="false"/>
+    <field name="advImage" type="string" column="adv_image" length="10" nullable="false"/>
+    <field name="advLink" type="string" column="adv_link" length="10" nullable="false"/>
+    <field name="inlinePopup" type="string" column="inline_popup" length="10" nullable="false"/>
+    <field name="safari" type="string" column="safari" length="10" nullable="false"/>
+    <field name="autoSave" type="string" column="auto_save" length="10" nullable="false"/>
+    <field name="contextMenu" type="string" column="context_menu" length="10" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Charities" table="charities">
+    <id name="charityid" type="integer" column="charityID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="charitytitle" type="string" column="charityTitle" length="100" nullable="false"/>
+    <field name="charityaddress1" type="string" column="charityAddress1" length="100" nullable="false"/>
+    <field name="charityaddress2" type="string" column="charityAddress2" length="100" nullable="true"/>
+    <field name="charitycity" type="string" column="charityCity" length="100" nullable="false"/>
+    <field name="stateid" type="integer" column="stateID" nullable="false"/>
+    <field name="charityprovince" type="string" column="charityProvince" length="100" nullable="true"/>
+    <field name="countryid" type="integer" column="countryID" nullable="false"/>
+    <field name="charityzip" type="string" column="charityZip" length="20" nullable="false"/>
+    <field name="charityphone" type="string" column="charityPhone" length="20" nullable="false"/>
+    <field name="charityfax" type="string" column="charityFax" length="20" nullable="false"/>
+    <field name="charityemail" type="string" column="charityEmail" length="100" nullable="false"/>
+    <field name="charitywebsite" type="string" column="charityWebsite" length="255" nullable="false"/>
+    <field name="charitydescription" type="text" column="charityDescription" nullable="false"/>
+    <field name="charitylogo" type="string" column="charityLogo" length="255" nullable="false"/>
+    <field name="charityaccountname" type="string" column="charityAccountName" length="100" nullable="false"/>
+    <field name="charityaccounttype" type="string" column="charityAccountType" length="100" nullable="false"/>
+    <field name="charityaccountdetails" type="text" column="charityAccountDetails" nullable="false"/>
+    <field name="charitystatus" type="string" column="charityStatus" nullable="false"/>
+    <field name="charitycreateddate" type="datetime" column="CharityCreatedDate" nullable="false"/>
+    <field name="charityupdateddate" type="datetime" column="CharityUpdatedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

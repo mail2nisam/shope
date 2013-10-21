@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ContentPagesDetails" table="content_pages_details">
+    <id name="contentdetailsid" type="integer" column="contentDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="contentid" type="integer" column="contentID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="contenttitle" type="string" column="contentTitle" length="255" nullable="false"/>
+    <field name="contentmenuname" type="string" column="contentMenuName" length="100" nullable="false"/>
+    <field name="contentdescription" type="text" column="contentDescription" nullable="false"/>
+    <field name="contentmetatitle" type="string" column="contentMetaTitle" length="255" nullable="false"/>
+    <field name="contentmetadescription" type="text" column="contentMetaDescription" nullable="false"/>
+    <field name="contentmetakeywords" type="text" column="contentMetaKeywords" nullable="false"/>
+  </entity>
+</doctrine-mapping>

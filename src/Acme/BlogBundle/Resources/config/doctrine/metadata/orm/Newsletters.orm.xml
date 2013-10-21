@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Newsletters" table="newsletters">
+    <id name="newsletterid" type="integer" column="newsletterID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="newsletterfromname" type="string" column="newsletterFromName" length="200" nullable="false"/>
+    <field name="newsletterfromemail" type="string" column="newsletterFromEmail" length="200" nullable="false"/>
+    <field name="newslettersent" type="string" column="newsletterSent" nullable="false"/>
+    <field name="newslettercreatedate" type="datetime" column="newsletterCreateDate" nullable="false"/>
+    <field name="newslettersentdate" type="datetime" column="newsletterSentDate" nullable="true"/>
+  </entity>
+</doctrine-mapping>

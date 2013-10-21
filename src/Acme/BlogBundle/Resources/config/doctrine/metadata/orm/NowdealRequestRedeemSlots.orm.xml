@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="NowdealRequestRedeemSlots" table="nowdeal_request_redeem_slots">
+    <id name="dealrequestredeemslotid" type="integer" column="dealRequestRedeemSlotID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealrequestid" type="integer" column="dealRequestID" nullable="false"/>
+    <field name="redeemslotstart" type="datetime" column="redeemSlotStart" nullable="false"/>
+    <field name="redeemslotend" type="datetime" column="redeemSlotEnd" nullable="false"/>
+    <field name="availablequantity" type="integer" column="availableQuantity" nullable="true"/>
+    <field name="quantityunlimited" type="string" column="quantityUnlimited" nullable="false"/>
+  </entity>
+</doctrine-mapping>

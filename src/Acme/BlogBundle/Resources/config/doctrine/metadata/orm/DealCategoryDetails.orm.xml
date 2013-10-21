@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealCategoryDetails" table="deal_category_details">
+    <id name="dealcategorydetid" type="integer" column="dealCategoryDetID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealcategoryid" type="integer" column="dealCategoryID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="dealcategoryname" type="string" column="dealCategoryName" length="255" nullable="false"/>
+    <field name="dealcategorydescription" type="text" column="dealCategoryDescription" nullable="false"/>
+  </entity>
+</doctrine-mapping>

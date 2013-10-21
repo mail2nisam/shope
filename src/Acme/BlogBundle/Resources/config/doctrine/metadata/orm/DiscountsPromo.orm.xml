@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DiscountsPromo" table="discounts_promo">
+    <id name="promoid" type="integer" column="promoID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="promoname" type="string" column="promoName" length="200" nullable="false"/>
+    <field name="promodescription" type="text" column="promoDescription" nullable="false"/>
+    <field name="promocode" type="string" column="promoCode" length="20" nullable="false"/>
+    <field name="promodiscount" type="float" column="promoDiscount" nullable="false"/>
+    <field name="promodiscounttype" type="string" column="promoDiscountType" nullable="false"/>
+    <field name="promominorderamount" type="float" column="promoMinOrderAmount" nullable="false"/>
+    <field name="promomaxusage" type="integer" column="promoMaxUsage" nullable="false"/>
+    <field name="promomaxusageperuser" type="integer" column="promoMaxUsagePerUser" nullable="false"/>
+    <field name="promoeffectondeals" type="string" column="promoEffectOnDeals" nullable="false"/>
+    <field name="promostartdate" type="date" column="promoStartDate" nullable="false"/>
+    <field name="promoexpdate" type="date" column="promoExpDate" nullable="false"/>
+    <field name="promostatus" type="string" column="promoStatus" nullable="false"/>
+    <field name="promoaddedtime" type="datetime" column="promoAddedTime" nullable="false"/>
+  </entity>
+</doctrine-mapping>

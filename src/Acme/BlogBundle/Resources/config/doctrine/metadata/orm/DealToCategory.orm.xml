@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealToCategory" table="deal_to_category">
+    <id name="dealtocategoryid" type="integer" column="dealToCategoryID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealcategoryid" type="integer" column="dealCategoryID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Deals" table="deals">
+    <id name="dealid" type="integer" column="dealID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealtypeid" type="integer" column="dealTypeID" nullable="false"/>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="istaxable" type="string" column="isTaxable" nullable="false"/>
+    <field name="taxclassid" type="integer" column="taxClassID" nullable="false"/>
+    <field name="taxrate" type="decimal" column="taxRate" nullable="true"/>
+    <field name="dealkey" type="string" column="dealKey" length="255" nullable="false"/>
+    <field name="dealbusinesslocations" type="string" column="dealBusinessLocations" length="255" nullable="false"/>
+    <field name="dealtimezone" type="integer" column="dealTimeZone" nullable="false"/>
+    <field name="dealstarttime" type="datetime" column="dealStartTime" nullable="false"/>
+    <field name="dealendtime" type="datetime" column="dealEndTime" nullable="false"/>
+    <field name="dealminbuylimit" type="integer" column="dealMinBuyLimit" nullable="true"/>
+    <field name="dealmaxgiftbuy" type="integer" column="dealMaxGiftBuy" nullable="true"/>
+    <field name="dealmaxbuylimit" type="integer" column="dealMaxBuyLimit" nullable="true"/>
+    <field name="dealminqntyreqtotipp" type="integer" column="dealMinQntyReqToTipp" nullable="false"/>
+    <field name="dealexpirydate" type="datetime" column="dealExpiryDate" nullable="false"/>
+    <field name="dealcommissionrate" type="float" column="dealCommissionRate" nullable="false"/>
+    <field name="dealuseglobalcommision" type="string" column="dealUseGlobalCommision" nullable="false"/>
+    <field name="dealcommissiontype" type="string" column="dealCommissionType" nullable="false"/>
+    <field name="dealservicefee" type="float" column="dealServiceFee" nullable="false"/>
+    <field name="dealshownosbought" type="string" column="dealShowNosBought" nullable="false"/>
+    <field name="dealshowdealtipped" type="string" column="dealShowDealTipped" nullable="false"/>
+    <field name="dealonlineredemption" type="string" column="dealOnlineRedemption" nullable="false"/>
+    <field name="dealimage" type="string" column="dealImage" length="255" nullable="false"/>
+    <field name="dealpriority" type="integer" column="dealPriority" nullable="false"/>
+    <field name="dealstatus" type="string" column="dealStatus" nullable="false"/>
+    <field name="inventorytracklevel" type="string" column="InventoryTrackLevel" nullable="false"/>
+    <field name="dealcreateddate" type="datetime" column="dealCreatedDate" nullable="false"/>
+    <field name="dealtippeddate" type="datetime" column="dealTippedDate" nullable="true"/>
+    <field name="shippingstatus" type="string" column="shippingStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

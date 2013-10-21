@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VisitorCountInfo" table="visitor_count_info">
+    <id name="visitorcountid" type="integer" column="visitorCountID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="date" type="date" column="date" nullable="false"/>
+    <field name="newvisitorcount" type="integer" column="newVisitorCount" nullable="false"/>
+    <field name="returningvisitorcount" type="integer" column="returningVisitorCount" nullable="false"/>
+    <field name="returningvisitcount" type="integer" column="returningVisitCount" nullable="false"/>
+    <field name="totalvisitcount" type="integer" column="totalVisitCount" nullable="false"/>
+  </entity>
+</doctrine-mapping>

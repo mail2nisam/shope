@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessReviews" table="business_reviews">
+    <id name="reviewid" type="bigint" column="reviewID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="userid" type="bigint" column="userID" nullable="false"/>
+    <field name="usercomment" type="text" column="userComment" nullable="false"/>
+    <field name="userrevieweddate" type="datetime" column="userReviewedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

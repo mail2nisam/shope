@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CharityPayments" table="charity_payments">
+    <id name="charitytransid" type="integer" column="charityTransID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="charityid" type="integer" column="charityID" nullable="false"/>
+    <field name="adminuserid" type="integer" column="adminUserID" nullable="false"/>
+    <field name="charitytransdescription" type="text" column="charityTransDescription" nullable="false"/>
+    <field name="charitytransdate" type="datetime" column="charityTransDate" nullable="false"/>
+    <field name="transactionamount" type="decimal" column="transactionAmount" nullable="false"/>
+    <field name="transactiontype" type="string" column="transactionType" length="50" nullable="false"/>
+  </entity>
+</doctrine-mapping>

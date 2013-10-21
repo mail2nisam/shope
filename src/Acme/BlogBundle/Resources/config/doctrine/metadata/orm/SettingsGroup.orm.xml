@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SettingsGroup" table="settings_group">
+    <id name="settingsgroupid" type="integer" column="settingsGroupID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="settingsgrouplabel" type="string" column="settingsGroupLabel" length="200" nullable="false"/>
+    <field name="settingsgroupdescription" type="text" column="settingsGroupDescription" nullable="false"/>
+    <field name="settingsgroupkey" type="string" column="settingsGroupKey" length="200" nullable="false"/>
+    <field name="settingsgroupsortorder" type="integer" column="settingsGroupSortOrder" nullable="false"/>
+  </entity>
+</doctrine-mapping>

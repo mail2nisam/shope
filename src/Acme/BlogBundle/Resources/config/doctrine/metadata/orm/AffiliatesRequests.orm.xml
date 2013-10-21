@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliatesRequests" table="affiliates_requests">
+    <id name="affiliatereqid" type="integer" column="affiliateReqID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliatereqfirstname" type="string" column="affiliateReqFirstName" length="100" nullable="true"/>
+    <field name="affiliatereqlastname" type="string" column="affiliateReqLastName" length="100" nullable="true"/>
+    <field name="affiliatereqcontactperson" type="string" column="affiliateReqContactPerson" length="150" nullable="true"/>
+    <field name="affiliatecompanyname" type="string" column="affiliateCompanyName" length="150" nullable="true"/>
+    <field name="affiliatereqaddress1" type="string" column="affiliateReqAddress1" length="150" nullable="true"/>
+    <field name="affiliatereqaddress2" type="string" column="affiliateReqAddress2" length="150" nullable="true"/>
+    <field name="affiliatereqemail" type="string" column="affiliateReqEmail" length="150" nullable="true"/>
+    <field name="affiliatereqphone" type="string" column="affiliateReqPhone" length="20" nullable="true"/>
+    <field name="affiliatereqfax" type="string" column="affiliateReqFax" length="20" nullable="true"/>
+    <field name="affiliatereqcity" type="string" column="affiliateReqCity" length="100" nullable="true"/>
+    <field name="affiliatereqstateid" type="integer" column="affiliateReqStateID" nullable="false"/>
+    <field name="affiliatereqprovince" type="string" column="affiliateReqProvince" length="50" nullable="true"/>
+    <field name="affiliatereqcountryid" type="integer" column="affiliateReqCountryID" nullable="false"/>
+    <field name="affiliatereqzipcode" type="string" column="affiliateReqZipcode" length="10" nullable="false"/>
+    <field name="affiliatereqtypeofwebsite" type="string" column="affiliateReqTypeofWebsite" length="100" nullable="true"/>
+    <field name="affiliatereqwebsiteurl" type="string" column="affiliateReqWebsiteURL" length="150" nullable="true"/>
+    <field name="affiliatereqcomments" type="string" column="affiliateReqComments" length="255" nullable="true"/>
+    <field name="affiliatereqstatus" type="string" column="affiliateReqStatus" nullable="false"/>
+    <field name="affiliatereqdate" type="datetime" column="affiliateReqDate" nullable="false"/>
+    <field name="affiliaterequpdateddate" type="datetime" column="affiliateReqUpdatedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

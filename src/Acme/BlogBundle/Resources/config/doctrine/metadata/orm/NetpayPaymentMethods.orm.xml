@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="NetpayPaymentMethods" table="netpay_payment_methods">
+    <id name="paymethodid" type="integer" column="payMethodId">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="methodcode" type="string" column="methodCode" length="50" nullable="false"/>
+    <field name="methodname" type="string" column="methodName" length="100" nullable="false"/>
+    <field name="bank" type="string" column="Bank" nullable="false"/>
+    <field name="status" type="string" column="status" nullable="false"/>
+  </entity>
+</doctrine-mapping>

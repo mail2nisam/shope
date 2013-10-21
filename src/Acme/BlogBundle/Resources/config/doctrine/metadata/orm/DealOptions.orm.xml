@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealOptions" table="deal_options">
+    <id name="dealoptionid" type="integer" column="dealOptionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealoptionregularprice" type="decimal" column="dealOptionRegularPrice" nullable="false"/>
+    <field name="dealoptiondealprice" type="decimal" column="dealOptionDealPrice" nullable="false"/>
+    <field name="dealoptionquantity" type="string" column="dealOptionQuantity" length="11" nullable="true"/>
+    <field name="dealquantityunlimited" type="string" column="dealQuantityUnlimited" length="2" nullable="true"/>
+    <field name="dealoptionstatus" type="string" column="dealOptionStatus" nullable="false"/>
+    <field name="dealoptiondefault" type="string" column="dealOptionDefault" nullable="false"/>
+  </entity>
+</doctrine-mapping>

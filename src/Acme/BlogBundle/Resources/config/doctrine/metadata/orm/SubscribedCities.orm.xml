@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SubscribedCities" table="subscribed_cities">
+    <id name="citysubscid" type="integer" column="citySubscID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="subscid" type="integer" column="subscID" nullable="false"/>
+    <field name="cityid" type="integer" column="cityID" nullable="false"/>
+    <field name="subscribeddate" type="datetime" column="subscribedDate" nullable="false"/>
+    <field name="subscstatus" type="string" column="subscStatus" nullable="false"/>
+    <field name="unsubscrdate" type="datetime" column="unsubscrDate" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="true"/>
+  </entity>
+</doctrine-mapping>

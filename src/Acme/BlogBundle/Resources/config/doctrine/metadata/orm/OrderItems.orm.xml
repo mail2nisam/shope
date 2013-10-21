@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="OrderItems" table="order_items">
+    <id name="orderitemid" type="integer" column="orderItemID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealoptionid" type="integer" column="dealOptionID" nullable="false"/>
+    <field name="orderitemprice" type="decimal" column="orderItemPrice" nullable="false"/>
+    <field name="orderitemquantity" type="integer" column="orderItemQuantity" nullable="false"/>
+    <field name="orderitemsubtotal" type="decimal" column="orderItemSubtotal" nullable="false"/>
+    <field name="istaxable" type="string" column="isTaxable" nullable="false"/>
+    <field name="orderitemtaxrate" type="decimal" column="orderItemTaxRate" nullable="true"/>
+    <field name="orderitemtaxdescription" type="text" column="orderItemTaxDescription" nullable="true"/>
+    <field name="ordergiveasgift" type="string" column="orderGiveAsGift" nullable="false"/>
+    <field name="certificatename" type="string" column="certificateName" length="200" nullable="true"/>
+    <field name="certificateemail" type="string" column="certificateEmail" length="200" nullable="true"/>
+    <field name="dealoptionname" type="string" column="dealOptionName" length="511" nullable="false"/>
+    <field name="dealoptioncerttitle" type="string" column="dealOptionCertTitle" length="511" nullable="false"/>
+    <field name="addedtime" type="datetime" column="addedTime" nullable="false"/>
+    <field name="redeemslotid" type="integer" column="redeemSlotID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessDetails" table="business_details">
+    <id name="businessdetailsid" type="integer" column="businessDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businessid" type="integer" column="businessID" nullable="true"/>
+    <field name="languageid" type="integer" column="languageID" nullable="true"/>
+    <field name="businessname" type="string" column="businessName" length="100" nullable="true"/>
+    <field name="businessaddress1" type="string" column="businessAddress1" length="100" nullable="true"/>
+    <field name="businessaddress2" type="string" column="businessAddress2" length="100" nullable="true"/>
+    <field name="businesscity" type="string" column="businessCity" length="100" nullable="true"/>
+    <field name="businessstateprovince" type="string" column="businessStateProvince" length="100" nullable="true"/>
+    <field name="businessprofile" type="text" column="businessProfile" nullable="true"/>
+  </entity>
+</doctrine-mapping>

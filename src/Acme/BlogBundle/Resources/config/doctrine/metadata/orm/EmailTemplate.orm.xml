@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EmailTemplate" table="email_template">
+    <id name="emailtempid" type="integer" column="emailTempID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="emailfromname" type="string" column="emailFromName" length="200" nullable="false"/>
+    <field name="emailfromemail" type="string" column="emailFromEmail" length="200" nullable="false"/>
+    <field name="emailtemplatename" type="string" column="emailTemplateName" length="255" nullable="false"/>
+    <field name="emailsendtokey" type="string" column="emailSendToKey" length="100" nullable="false"/>
+    <field name="editable" type="string" column="editable" nullable="false"/>
+  </entity>
+</doctrine-mapping>

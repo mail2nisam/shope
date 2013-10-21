@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdminUsers" table="admin_users">
+    <id name="adminuserid" type="integer" column="adminUserID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="adminuserfirstname" type="string" column="adminUserFirstName" length="100" nullable="false"/>
+    <field name="adminuserlastname" type="string" column="adminUserLastName" length="100" nullable="false"/>
+    <field name="adminuseremail" type="string" column="adminUserEmail" length="100" nullable="false"/>
+    <field name="adminuserloginname" type="string" column="adminUserLoginName" length="50" nullable="false"/>
+    <field name="adminuserloginpass" type="string" column="adminUserLoginPass" length="50" nullable="false"/>
+    <field name="adminuserstatus" type="string" column="adminUserStatus" nullable="false"/>
+    <field name="adminuseraccesscount" type="integer" column="adminUserAccessCount" nullable="false"/>
+    <field name="adminuserinvalidaccesscount" type="integer" column="adminUserInvalidAccessCount" nullable="false"/>
+    <field name="adminuserlockeddate" type="datetime" column="adminUserLockedDate" nullable="false"/>
+    <field name="adminusercreateddate" type="datetime" column="adminUserCreatedDate" nullable="false"/>
+    <field name="adminuserlastaccessdate" type="datetime" column="adminUserLastAccessDate" nullable="false"/>
+    <field name="usertypeid" type="integer" column="userTypeID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Settings" table="settings">
+    <id name="settingsid" type="integer" column="settingsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="settingsgroupid" type="integer" column="settingsGroupID" nullable="false"/>
+    <field name="settingslabel" type="string" column="settingsLabel" length="200" nullable="false"/>
+    <field name="settingskey" type="string" column="settingsKey" length="200" nullable="false"/>
+    <field name="settingstype" type="string" column="settingsType" length="200" nullable="false"/>
+    <field name="settingsfieldtype" type="string" column="settingsFieldType" length="255" nullable="false"/>
+    <field name="settingsdependants" type="text" column="settingsDependants" nullable="false"/>
+    <field name="settingsoptions" type="text" column="settingsOptions" nullable="false"/>
+    <field name="settingsvalue" type="text" column="settingsValue" nullable="false"/>
+    <field name="settingsvalidate" type="string" column="settingsValidate" length="200" nullable="false"/>
+    <field name="settingsvalidateerror" type="string" column="settingsValidateError" length="255" nullable="false"/>
+    <field name="settingsdescription" type="text" column="settingsDescription" nullable="false"/>
+    <field name="settingssortorder" type="integer" column="settingsSortOrder" nullable="false"/>
+    <field name="settingssecure" type="string" column="settingsSecure" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CmsSections" table="cms_sections">
+    <id name="sectionid" type="integer" column="sectionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="sectionstatus" type="string" column="sectionStatus" nullable="false"/>
+    <field name="sectiondefault" type="string" column="sectionDefault" nullable="false"/>
+    <field name="sectionpriority" type="integer" column="sectionPriority" nullable="false"/>
+  </entity>
+</doctrine-mapping>

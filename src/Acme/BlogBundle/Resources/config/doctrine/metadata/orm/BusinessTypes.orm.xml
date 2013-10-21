@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessTypes" table="business_types">
+    <id name="businesstypeid" type="integer" column="businessTypeId">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesstypeparent" type="integer" column="businessTypeParent" nullable="false"/>
+    <field name="businesstypestatus" type="string" column="businessTypeStatus" nullable="false"/>
+    <field name="businesstypesortorder" type="integer" column="businessTypeSortOrder" nullable="false"/>
+  </entity>
+</doctrine-mapping>

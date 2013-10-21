@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealTypeDetails" table="deal_type_details">
+    <id name="dealtypedetailsid" type="integer" column="dealTypeDetailsId">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealtypeid" type="integer" column="dealTypeID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="dealtypename" type="string" column="dealTypeName" length="255" nullable="false"/>
+    <field name="dealtypedescription" type="text" column="dealTypeDescription" nullable="false"/>
+  </entity>
+</doctrine-mapping>

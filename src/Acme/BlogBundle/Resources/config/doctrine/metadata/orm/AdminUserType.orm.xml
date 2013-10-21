@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdminUserType" table="admin_user_type">
+    <id name="usertypeid" type="integer" column="userTypeID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="usertypename" type="string" column="userTypeName" length="255" nullable="true"/>
+    <field name="usertypestatus" type="string" column="userTypeStatus" nullable="true"/>
+    <field name="adminmode" type="string" column="adminMode" nullable="false"/>
+  </entity>
+</doctrine-mapping>

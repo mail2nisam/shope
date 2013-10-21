@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessTypeDetails" table="business_type_details">
+    <id name="businesstypedetid" type="integer" column="businessTypeDetID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesstypeid" type="integer" column="businessTypeID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="businesstypename" type="string" column="businessTypeName" length="255" nullable="false"/>
+    <field name="businesstypedescription" type="text" column="businessTypeDescription" nullable="false"/>
+  </entity>
+</doctrine-mapping>

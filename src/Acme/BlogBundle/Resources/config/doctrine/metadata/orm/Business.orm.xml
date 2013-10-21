@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Business" table="business">
+    <id name="businessid" type="integer" column="businessID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesslogin" type="string" column="businessLogin" length="100" nullable="false"/>
+    <field name="businesspassword" type="string" column="businessPassword" length="50" nullable="false"/>
+    <field name="businessname" type="string" column="businessName" length="100" nullable="false"/>
+    <field name="businesskey" type="string" column="businessKey" length="100" nullable="false"/>
+    <field name="businessaddress1" type="string" column="businessAddress1" length="100" nullable="false"/>
+    <field name="businessaddress2" type="string" column="businessAddress2" length="100" nullable="false"/>
+    <field name="businesscity" type="string" column="businessCity" length="100" nullable="false"/>
+    <field name="businessstateid" type="integer" column="businessStateID" nullable="false"/>
+    <field name="businessstateprovince" type="string" column="businessStateProvince" length="100" nullable="false"/>
+    <field name="businesscountryid" type="integer" column="businessCountryID" nullable="false"/>
+    <field name="businesslatitude" type="string" column="businessLatitude" length="25" nullable="false"/>
+    <field name="businesslongitude" type="string" column="businessLongitude" length="25" nullable="false"/>
+    <field name="businessprofile" type="text" column="businessProfile" nullable="false"/>
+    <field name="businesslogo" type="string" column="businessLogo" length="255" nullable="false"/>
+    <field name="businesscfirstname" type="string" column="businessCFirstName" length="50" nullable="false"/>
+    <field name="businessclastname" type="string" column="businessCLastName" length="50" nullable="false"/>
+    <field name="businesscdesignation" type="string" column="businessCDesignation" length="100" nullable="false"/>
+    <field name="businessphone" type="string" column="businessPhone" length="25" nullable="false"/>
+    <field name="businessfax" type="string" column="businessFax" length="25" nullable="false"/>
+    <field name="businesszip" type="string" column="businessZip" length="10" nullable="false"/>
+    <field name="businessemail" type="string" column="businessEmail" length="100" nullable="false"/>
+    <field name="businesswebsite" type="string" column="businessWebsite" length="450" nullable="false"/>
+    <field name="businessaccountname" type="string" column="businessAccountName" length="255" nullable="false"/>
+    <field name="businessaccounttype" type="string" column="businessAccountType" length="100" nullable="false"/>
+    <field name="businessaccountdetails" type="text" column="businessAccountDetails" nullable="false"/>
+    <field name="businesspaypalemail" type="string" column="businessPaypalEmail" length="250" nullable="true"/>
+    <field name="businessstatus" type="string" column="businessStatus" nullable="false"/>
+    <field name="businessaddeddate" type="datetime" column="businessAddedDate" nullable="false"/>
+    <field name="businessupdatedate" type="datetime" column="businessUpdateDate" nullable="false"/>
+    <field name="businessdefaultlanguageid" type="integer" column="businessDefaultLanguageID" nullable="false"/>
+    <field name="ndsId" type="integer" column="nds_id" nullable="false"/>
+    <field name="usersUserId" type="integer" column="users_user_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

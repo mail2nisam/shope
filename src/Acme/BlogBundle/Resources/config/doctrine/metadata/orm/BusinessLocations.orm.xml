@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessLocations" table="business_locations">
+    <id name="businesslocid" type="integer" column="businessLocID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="locname" type="string" column="locName" length="100" nullable="false"/>
+    <field name="locaddress1" type="string" column="locAddress1" length="100" nullable="false"/>
+    <field name="locaddress2" type="string" column="locAddress2" length="100" nullable="false"/>
+    <field name="loccity" type="string" column="locCity" length="100" nullable="false"/>
+    <field name="locstateid" type="integer" column="locStateID" nullable="false"/>
+    <field name="locprovince" type="string" column="locProvince" length="100" nullable="false"/>
+    <field name="loccountryid" type="integer" column="locCountryID" nullable="false"/>
+    <field name="loczip" type="string" column="locZip" length="10" nullable="false"/>
+    <field name="loclatitude" type="string" column="locLatitude" length="25" nullable="false"/>
+    <field name="loclongitude" type="string" column="locLongitude" length="25" nullable="false"/>
+    <field name="locphone" type="string" column="locPhone" length="25" nullable="false"/>
+    <field name="locemail" type="string" column="locEmail" length="50" nullable="false"/>
+    <field name="locstatus" type="string" column="locStatus" nullable="false"/>
+    <field name="loccreateddate" type="datetime" column="locCreatedDate" nullable="false"/>
+    <field name="locmodifieddate" type="datetime" column="locModifiedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdminModules" table="admin_modules">
+    <id name="adminmoduleid" type="float" column="adminModuleID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="adminmoduleparentid" type="float" column="adminModuleParentID" nullable="true"/>
+    <field name="adminmoduleurlkey" type="string" column="adminModuleURLKey" length="765" nullable="true"/>
+    <field name="adminmoduleurlstring" type="string" column="adminModuleURLString" length="765" nullable="true"/>
+    <field name="adminmodulestyleclass" type="string" column="adminModuleStyleClass" length="765" nullable="true"/>
+    <field name="adminmodulestyleicon" type="string" column="adminModuleStyleIcon" length="765" nullable="true"/>
+    <field name="adminmoduleorder" type="float" column="adminModuleOrder" nullable="true"/>
+    <field name="adminmoduletype" type="string" column="adminModuleType" nullable="true"/>
+    <field name="adminmodulestatus" type="string" column="adminModuleStatus" nullable="true"/>
+  </entity>
+</doctrine-mapping>

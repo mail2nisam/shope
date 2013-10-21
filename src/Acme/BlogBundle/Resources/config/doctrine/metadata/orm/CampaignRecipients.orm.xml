@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CampaignRecipients" table="campaign_recipients">
+    <id name="campaignrecipientsid" type="integer" column="campaignRecipientsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="campaignid" type="integer" column="campaignID" nullable="false"/>
+    <field name="emailid" type="string" column="emailID" length="100" nullable="false"/>
+    <field name="actiondate" type="datetime" column="actionDate" nullable="false"/>
+    <field name="type" type="string" column="type" nullable="false"/>
+  </entity>
+</doctrine-mapping>

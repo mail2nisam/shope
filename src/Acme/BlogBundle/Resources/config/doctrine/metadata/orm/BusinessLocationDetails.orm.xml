@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessLocationDetails" table="business_location_details">
+    <id name="locdetailsid" type="integer" column="locDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesslocid" type="integer" column="businessLocID" nullable="true"/>
+    <field name="languageid" type="integer" column="languageID" nullable="true"/>
+    <field name="locname" type="string" column="locName" length="100" nullable="true"/>
+    <field name="locaddress1" type="string" column="locAddress1" length="100" nullable="true"/>
+    <field name="locaddress2" type="string" column="locAddress2" length="100" nullable="true"/>
+    <field name="loccity" type="string" column="locCity" length="100" nullable="true"/>
+    <field name="locprovince" type="string" column="locProvince" length="100" nullable="true"/>
+  </entity>
+</doctrine-mapping>

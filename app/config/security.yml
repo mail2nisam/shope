@@ -1,0 +1,53 @@
+jms_security_extra:
+    secure_all_services: false
+    expressions: true
+
+security:
+    providers:
+        chain_provider:
+          chain:
+            providers: [fos_userbundle, facebook_provider]
+        fos_userbundle:
+            id: fos_user.user_provider.username
+        facebook_provider:
+          id: facebook_provider # Notre provider, nous y viendrons par la suite.
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    firewalls:
+        main:
+            pattern: ^/
+            fos_facebook:
+                app_url: "%api_facebook_name%"
+                server_url: "%api_facebook_server%"
+                check_path: /loginFb
+                provider: facebook_provider
+                always_use_default_target_path: false
+                use_referer: true
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: form.csrf_provider
+                login_path: /login
+                check_path: fos_user_security_check
+                default_target_path: /admin
+                always_use_default_target_path: false
+                use_referer: true 
+            logout:
+                path: /logout
+                #handlers: ["fos_facebook.logout_handler"]
+            anonymous:    true
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        
+#        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/admin/login-check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN

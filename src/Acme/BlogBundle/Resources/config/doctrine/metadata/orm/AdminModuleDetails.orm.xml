@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdminModuleDetails" table="admin_module_details">
+    <id name="adminmoduledetailsid" type="float" column="adminModuleDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="adminmoduleid" type="float" column="adminModuleID" nullable="true"/>
+    <field name="languageid" type="float" column="languageID" nullable="true"/>
+    <field name="adminmodulecaption" type="string" column="adminModuleCaption" length="255" nullable="true"/>
+    <field name="adminmodulebreadcrumbcaption" type="string" column="adminModuleBreadcrumbCaption" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

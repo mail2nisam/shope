@@ -1,0 +1,18 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: superbb
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: 27ee2660d691fd148c28b43b5a84b601
+    database_path: null
+    api_facebook_id:      588053007878099 # ID de l’application/Clé de l’API
+    api_facebook_secret:  ccdeddefd3b894bd4b43503e951041bd # Clé secrète
+    api_facebook_name:    https://developers.facebook.com/apps/588053007878099/ # App Namespace
+    api_facebook_server:  http://localhost:81/symfony/web/app_dev.php/

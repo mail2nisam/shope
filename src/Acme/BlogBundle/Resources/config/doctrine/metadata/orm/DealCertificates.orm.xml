@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealCertificates" table="deal_certificates">
+    <id name="certificateid" type="bigint" column="certificateID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="orderid" type="bigint" column="orderID" nullable="false"/>
+    <field name="orderitemid" type="bigint" column="orderItemID" nullable="false"/>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="certificatecode" type="string" column="certificateCode" length="200" nullable="false"/>
+    <field name="certificatename" type="string" column="certificateName" length="200" nullable="false"/>
+    <field name="certificateemail" type="string" column="certificateEmail" length="255" nullable="true"/>
+    <field name="cercreatedate" type="datetime" column="cerCreateDate" nullable="false"/>
+    <field name="cerexpirydate" type="datetime" column="cerExpiryDate" nullable="false"/>
+    <field name="statusUpdatedBy" type="string" column="status_updated_by" nullable="false"/>
+    <field name="statusUpdatedDate" type="datetime" column="status_updated_date" nullable="false"/>
+    <field name="cerstatus" type="string" column="cerStatus" nullable="false"/>
+    <field name="mailsendstatus" type="string" column="mailSendStatus" nullable="false"/>
+    <field name="mailsentby" type="string" column="mailSentBy" length="127" nullable="false"/>
+    <field name="certificatedata" type="blob" column="certificateData" nullable="false"/>
+  </entity>
+</doctrine-mapping>

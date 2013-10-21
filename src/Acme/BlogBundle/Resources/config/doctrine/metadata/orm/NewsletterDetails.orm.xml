@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="NewsletterDetails" table="newsletter_details">
+    <id name="newsletterdetailsid" type="integer" column="newsLetterDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="newsletterid" type="integer" column="newsLetterID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="newslettersubject" type="string" column="newsLetterSubject" length="255" nullable="false"/>
+    <field name="newslettercontenthtml" type="text" column="newsLetterContentHtml" nullable="false"/>
+    <field name="newslettercontenttext" type="text" column="newsLetterContentText" nullable="false"/>
+  </entity>
+</doctrine-mapping>

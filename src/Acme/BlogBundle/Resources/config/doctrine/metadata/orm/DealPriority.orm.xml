@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealPriority" table="deal_priority">
+    <id name="dealpriorityid" type="integer" column="dealPriorityID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cityid" type="integer" column="cityID" nullable="false"/>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealpriority" type="integer" column="dealPriority" nullable="false"/>
+  </entity>
+</doctrine-mapping>

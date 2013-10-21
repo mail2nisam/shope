@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UserShipping" table="user_shipping">
+    <id name="usershippingid" type="integer" column="userShippingID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="shippingfname" type="string" column="shippingFname" length="50" nullable="false"/>
+    <field name="shippinglname" type="string" column="shippingLname" length="50" nullable="false"/>
+    <field name="shippingaddress1" type="string" column="shippingAddress1" length="100" nullable="false"/>
+    <field name="shippingaddress2" type="string" column="shippingAddress2" length="100" nullable="false"/>
+    <field name="shippingcity" type="string" column="shippingCity" length="100" nullable="false"/>
+    <field name="shippingzip" type="string" column="shippingZip" length="50" nullable="false"/>
+    <field name="shippingcountryid" type="integer" column="shippingCountryID" nullable="false"/>
+    <field name="shippingstateid" type="integer" column="shippingStateID" nullable="false"/>
+    <field name="shippingprovince" type="string" column="shippingProvince" length="50" nullable="false"/>
+  </entity>
+</doctrine-mapping>

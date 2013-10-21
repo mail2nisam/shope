@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Countries" table="countries">
+    <id name="countryid" type="integer" column="countryID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="countryavailable" type="string" column="countryAvailable" nullable="false"/>
+    <field name="countryisoa2" type="string" column="countryIsoA2" length="2" nullable="false"/>
+    <field name="countryisoa3" type="string" column="countryIsoA3" length="3" nullable="false"/>
+    <field name="countryisonumber" type="string" column="countryIsoNumber" length="4" nullable="false"/>
+    <field name="countrypriority" type="integer" column="countryPriority" nullable="false"/>
+    <field name="addressformatid" type="integer" column="addressFormatID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

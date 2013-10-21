@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ShippingRates" table="shipping_rates">
+    <id name="shippingrateid" type="integer" column="shippingRateID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="ratenational" type="float" column="rateNational" nullable="false"/>
+    <field name="rateinternational" type="float" column="rateInternational" nullable="false"/>
+    <field name="freeshippingminqty" type="integer" column="freeShippingMinQty" nullable="false"/>
+    <field name="shippingorigincountryid" type="integer" column="shippingOriginCountryID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

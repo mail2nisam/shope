@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CharityDetails" table="charity_details">
+    <id name="charitydetid" type="integer" column="charityDetID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="charityid" type="integer" column="charityID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="charitytitle" type="string" column="charityTitle" length="255" nullable="false"/>
+    <field name="charityaddress1" type="string" column="charityAddress1" length="100" nullable="false"/>
+    <field name="charityaddress2" type="string" column="charityAddress2" length="100" nullable="false"/>
+    <field name="charitycity" type="string" column="charityCity" length="100" nullable="false"/>
+    <field name="charityprovince" type="string" column="charityProvince" length="100" nullable="false"/>
+    <field name="charitydescription" type="text" column="charityDescription" nullable="false"/>
+  </entity>
+</doctrine-mapping>

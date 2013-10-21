@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CityLocationDetails" table="city_location_details">
+    <id name="citylocdetailsid" type="integer" column="cityLocDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="citylocid" type="integer" column="cityLocID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="citylocname" type="string" column="cityLocName" length="100" nullable="false"/>
+    <field name="cityloctips" type="text" column="cityLocTips" nullable="false"/>
+  </entity>
+</doctrine-mapping>

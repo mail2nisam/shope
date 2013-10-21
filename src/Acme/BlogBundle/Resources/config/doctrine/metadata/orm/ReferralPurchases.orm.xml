@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ReferralPurchases" table="referral_purchases">
+    <id name="refpurchaseid" type="integer" column="refPurchaseID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="referrerid" type="integer" column="referrerID" nullable="false"/>
+    <field name="purchasedate" type="datetime" column="purchaseDate" nullable="false"/>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliateCommissions" table="affiliate_commissions">
+    <id name="affiliatecommissionid" type="integer" column="affiliateCommissionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affvisitorid" type="integer" column="affVisitorID" nullable="false"/>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="false"/>
+    <field name="actionid" type="integer" column="actionID" nullable="false"/>
+    <field name="commissionamount" type="decimal" column="commissionAmount" nullable="false"/>
+    <field name="commissionpercent" type="decimal" column="commissionPercent" nullable="false"/>
+    <field name="type" type="string" column="type" nullable="false"/>
+    <field name="status" type="string" column="status" nullable="false"/>
+    <field name="createddate" type="datetime" column="createdDate" nullable="false"/>
+    <field name="lastupdatedate" type="datetime" column="lastUpdateDate" nullable="false"/>
+    <field name="level" type="string" column="level" nullable="false"/>
+  </entity>
+</doctrine-mapping>

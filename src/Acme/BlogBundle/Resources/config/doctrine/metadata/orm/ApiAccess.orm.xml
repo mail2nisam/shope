@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ApiAccess" table="api_access">
+    <id name="accessid" type="integer" column="accessID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userapikey" type="string" column="userApiKey" length="110" nullable="false"/>
+    <field name="lastaccess" type="datetime" column="lastAccess" nullable="false"/>
+    <field name="accesscount" type="integer" column="accessCount" nullable="false"/>
+  </entity>
+</doctrine-mapping>

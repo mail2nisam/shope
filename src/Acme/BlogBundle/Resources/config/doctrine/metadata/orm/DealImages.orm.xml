@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealImages" table="deal_images">
+    <id name="dealimageid" type="integer" column="dealImageID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealimage" type="string" column="dealImage" length="255" nullable="false"/>
+    <field name="dealimagepriority" type="integer" column="dealImagePriority" nullable="false"/>
+    <field name="dealimagestatus" type="string" column="dealImageStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

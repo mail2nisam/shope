@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UserApi" table="user_api">
+    <id name="userapiid" type="integer" column="userApiID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="userapikey" type="string" column="userApiKey" length="105" nullable="false"/>
+    <field name="apikeytitle" type="string" column="apiKeyTitle" length="200" nullable="false"/>
+    <field name="apiusertype" type="string" column="apiUserType" nullable="false"/>
+    <field name="apiuserstatus" type="string" column="apiUserStatus" nullable="false"/>
+    <field name="apiusercreateddate" type="datetime" column="apiUserCreatedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Currencies" table="currencies">
+    <id name="currencyid" type="integer" column="currencyID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="currencyname" type="string" column="currencyName" length="50" nullable="false"/>
+    <field name="currencycode" type="string" column="currencyCode" length="4" nullable="false"/>
+    <field name="currencysymbolleft" type="string" column="currencySymbolLeft" length="5" nullable="false"/>
+    <field name="currencysymbolright" type="string" column="currencySymbolRight" length="5" nullable="false"/>
+    <field name="currencydecimalplaces" type="integer" column="currencyDecimalPlaces" nullable="false"/>
+    <field name="currencyvalue" type="decimal" column="currencyValue" nullable="false"/>
+    <field name="currencydefault" type="string" column="currencyDefault" nullable="false"/>
+    <field name="currencytype" type="string" column="currencyType" nullable="false"/>
+    <field name="currencyactive" type="string" column="currencyActive" nullable="false"/>
+    <field name="currencystatus" type="string" column="currencyStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

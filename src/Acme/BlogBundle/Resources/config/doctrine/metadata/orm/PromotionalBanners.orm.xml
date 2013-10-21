@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PromotionalBanners" table="promotional_banners">
+    <id name="bannerid" type="integer" column="bannerID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="bannertypeid" type="integer" column="bannerTypeID" nullable="false"/>
+    <field name="bannercaption" type="string" column="bannerCaption" length="255" nullable="true"/>
+    <field name="bannerdisplaytype" type="string" column="bannerDisplayType" nullable="false"/>
+    <field name="bannerscript" type="text" column="bannerScript" nullable="false"/>
+    <field name="bannerimage" type="string" column="bannerImage" length="200" nullable="false"/>
+    <field name="bannerswf" type="string" column="bannerSwf" length="200" nullable="false"/>
+    <field name="bannerurl" type="string" column="bannerURL" length="200" nullable="false"/>
+    <field name="bannerstatus" type="string" column="bannerStatus" nullable="false"/>
+    <field name="bannercreateddate" type="datetime" column="bannerCreatedDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

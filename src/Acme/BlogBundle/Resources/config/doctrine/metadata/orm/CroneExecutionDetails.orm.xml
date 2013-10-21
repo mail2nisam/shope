@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CroneExecutionDetails" table="crone_execution_details">
+    <id name="croneid" type="integer" column="croneID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="executiontime" type="datetime" column="executionTime" nullable="false"/>
+    <field name="rowsaffected" type="integer" column="rowsAffected" nullable="false"/>
+    <field name="lastaffectedid" type="integer" column="lastAffectedID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

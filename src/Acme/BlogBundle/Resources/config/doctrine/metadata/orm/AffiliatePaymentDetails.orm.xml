@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliatePaymentDetails" table="affiliate_payment_details">
+    <id name="affiliatepaymentdetailid" type="integer" column="affiliatePaymentDetailID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliatepaymenttransid" type="integer" column="affiliatePaymentTransID" nullable="false"/>
+    <field name="affiliatecommissionid" type="integer" column="affiliateCommissionID" nullable="false"/>
+    <field name="affiliatepaidamount" type="decimal" column="affiliatePaidAmount" nullable="false"/>
+  </entity>
+</doctrine-mapping>

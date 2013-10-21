@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealRequestDetails" table="deal_request_details">
+    <id name="dealrequestdetailsid" type="integer" column="dealRequestDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="dealrequestid" type="integer" column="dealRequestID" nullable="false"/>
+    <field name="dealrequesttitle" type="string" column="dealRequestTitle" length="255" nullable="false"/>
+    <field name="dealrequestcertificatetitle" type="string" column="dealRequestCertificateTitle" length="255" nullable="false"/>
+    <field name="dealrequestfineprint" type="text" column="dealRequestFinePrint" nullable="false"/>
+    <field name="dealrequesthighlights" type="text" column="dealRequestHighlights" nullable="false"/>
+    <field name="dealrequestdescription" type="text" column="dealRequestDescription" nullable="false"/>
+    <field name="dealrequestreviews" type="text" column="dealRequestReviews" nullable="false"/>
+    <field name="dealrequestcertificateinstructions" type="text" column="dealRequestCertificateInstructions" nullable="false"/>
+  </entity>
+</doctrine-mapping>

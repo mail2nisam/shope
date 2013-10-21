@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RefundTransactions" table="refund_transactions">
+    <id name="refundtransactionid" type="integer" column="refundTransactionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="transactionid" type="text" column="transactionID" nullable="true"/>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="completeddate" type="datetime" column="completedDate" nullable="false"/>
+    <field name="refundtype" type="string" column="refundType" length="100" nullable="true"/>
+    <field name="refundgateway" type="string" column="refundGateway" length="100" nullable="true"/>
+    <field name="refundresponse" type="text" column="refundResponse" nullable="true"/>
+    <field name="refundamount" type="decimal" column="refundAmount" nullable="true"/>
+    <field name="refundexecutionid" type="integer" column="refundExecutionID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

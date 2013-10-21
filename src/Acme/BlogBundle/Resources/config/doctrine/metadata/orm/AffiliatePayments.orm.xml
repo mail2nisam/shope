@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliatePayments" table="affiliate_payments">
+    <id name="affiliatepaymenttransid" type="integer" column="affiliatePaymentTransID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="false"/>
+    <field name="affiliatetransdate" type="datetime" column="affiliateTransDate" nullable="false"/>
+    <field name="affiliatetransamt" type="decimal" column="affiliateTransAmt" nullable="false"/>
+    <field name="affiliatetranstype" type="string" column="affiliateTransType" length="50" nullable="false"/>
+    <field name="affiliatetransdescrption" type="string" column="affiliateTransDescrption" length="255" nullable="true"/>
+    <field name="readstatus" type="string" column="readStatus" nullable="false"/>
+    <field name="transactiondescrforaffiliate" type="text" column="transactionDescrForAffiliate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

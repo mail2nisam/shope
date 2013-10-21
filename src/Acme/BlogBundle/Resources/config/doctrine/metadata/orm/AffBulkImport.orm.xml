@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffBulkImport" table="aff_bulk_import">
+    <id name="bulkid" type="integer" column="bulkID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="false"/>
+    <field name="commission" type="decimal" column="commission" nullable="false"/>
+    <field name="addeddate" type="datetime" column="addedDate" nullable="false"/>
+    <field name="campaignlistid" type="string" column="campaignListID" length="100" nullable="false"/>
+    <field name="campaignlistname" type="string" column="campaignListName" length="50" nullable="false"/>
+    <field name="mailsendstatus" type="string" column="mailSendStatus" nullable="false"/>
+    <field name="cities" type="text" column="cities" nullable="false"/>
+    <field name="type" type="string" column="type" nullable="false"/>
+    <field name="mailscheduledate" type="datetime" column="mailScheduleDate" nullable="false"/>
+    <field name="importlog" type="text" column="importLog" nullable="false"/>
+  </entity>
+</doctrine-mapping>

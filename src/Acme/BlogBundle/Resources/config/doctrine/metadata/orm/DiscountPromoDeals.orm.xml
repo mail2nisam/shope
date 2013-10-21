@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DiscountPromoDeals" table="discount_promo_deals">
+    <id name="promodealid" type="integer" column="promoDealID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="promoid" type="integer" column="promoID" nullable="false"/>
+    <field name="dealid" type="integer" column="DealID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

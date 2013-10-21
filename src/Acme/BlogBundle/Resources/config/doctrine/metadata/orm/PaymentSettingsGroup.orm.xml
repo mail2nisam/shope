@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PaymentSettingsGroup" table="payment_settings_group">
+    <id name="paysetgroupid" type="integer" column="paySetGroupID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="paysetgrouplabel" type="string" column="paySetGroupLabel" length="255" nullable="false"/>
+    <field name="paysetgroupkey" type="string" column="paySetGroupKey" length="255" nullable="false"/>
+    <field name="paysetgroupsortorder" type="integer" column="paySetGroupSortOrder" nullable="false"/>
+    <field name="paysetgroupstatus" type="string" column="paySetGroupStatus" nullable="false"/>
+    <field name="paytsetgrouplastupdated" type="datetime" column="paytSetGroupLastUpdated" nullable="false"/>
+  </entity>
+</doctrine-mapping>

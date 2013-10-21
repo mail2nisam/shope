@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Affiliates" table="affiliates">
+    <id name="affiliateuserid" type="integer" column="affiliateUserID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliateid" type="string" column="affiliateID" length="25" nullable="true"/>
+    <field name="affiliatereqid" type="integer" column="affiliateReqID" nullable="false"/>
+    <field name="affiliateusername" type="string" column="affiliateUserName" length="100" nullable="true"/>
+    <field name="affiliatepassword" type="string" column="affiliatePassword" length="50" nullable="true"/>
+    <field name="affiliatefirstname" type="string" column="affiliateFirstName" length="100" nullable="true"/>
+    <field name="affiliatelastname" type="string" column="affiliateLastName" length="100" nullable="true"/>
+    <field name="affiliatecontactperson" type="string" column="affiliateContactPerson" length="100" nullable="true"/>
+    <field name="affiliatecompanyname" type="string" column="affiliateCompanyName" length="100" nullable="true"/>
+    <field name="affiliateaddress1" type="string" column="affiliateAddress1" length="150" nullable="true"/>
+    <field name="affiliateaddress2" type="string" column="affiliateAddress2" length="150" nullable="true"/>
+    <field name="affiliateemail" type="string" column="affiliateEmail" length="150" nullable="true"/>
+    <field name="affiliatephone" type="string" column="affiliatePhone" length="50" nullable="true"/>
+    <field name="affiliatefax" type="string" column="affiliateFax" length="50" nullable="true"/>
+    <field name="affiliatecity" type="string" column="affiliateCity" length="100" nullable="true"/>
+    <field name="affiliatestateid" type="integer" column="affiliateStateID" nullable="false"/>
+    <field name="affiliatestateprovince" type="string" column="affiliateStateProvince" length="50" nullable="true"/>
+    <field name="affiliatecountryid" type="integer" column="affiliateCountryID" nullable="false"/>
+    <field name="affiliatezipcode" type="string" column="affiliateZipcode" length="10" nullable="false"/>
+    <field name="affiliatetypeofwebsite" type="string" column="affiliateTypeofWebsite" length="100" nullable="true"/>
+    <field name="affiliatewebsiteurl" type="string" column="affiliateWebsiteURL" length="100" nullable="true"/>
+    <field name="affiliateaccounttype" type="string" column="affiliateAccountType" length="100" nullable="true"/>
+    <field name="affiliateaccountname" type="string" column="affiliateAccountName" length="100" nullable="true"/>
+    <field name="affiliateaccountdetails" type="string" column="affiliateAccountDetails" length="255" nullable="true"/>
+    <field name="affiliatestatus" type="string" column="affiliateStatus" nullable="false"/>
+    <field name="affiliateregisterdate" type="datetime" column="affiliateRegisterDate" nullable="false"/>
+    <field name="affiliatelastaccesed" type="datetime" column="affiliateLastAccesed" nullable="false"/>
+    <field name="preferredlanguage" type="integer" column="preferredLanguage" nullable="false"/>
+  </entity>
+</doctrine-mapping>

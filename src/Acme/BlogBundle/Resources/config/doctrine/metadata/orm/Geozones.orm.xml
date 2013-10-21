@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Geozones" table="geozones">
+    <id name="geozoneid" type="integer" column="geoZoneID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="geozonename" type="string" column="geoZoneName" length="200" nullable="false"/>
+    <field name="geozonedescription" type="string" column="geoZoneDescription" length="200" nullable="false"/>
+    <field name="geozoneadded" type="datetime" column="geoZoneAdded" nullable="false"/>
+    <field name="geozonemodified" type="datetime" column="geoZoneModified" nullable="false"/>
+    <field name="geozonestatus" type="string" column="geoZoneStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

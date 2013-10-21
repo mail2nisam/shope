@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessRequests" table="business_requests">
+    <id name="businessreqid" type="integer" column="businessReqID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesstypeid" type="integer" column="businessTypeID" nullable="false"/>
+    <field name="businesstypeother" type="string" column="businessTypeOther" length="255" nullable="false"/>
+    <field name="businessreqname" type="string" column="businessReqName" length="100" nullable="false"/>
+    <field name="businessreqfirstname" type="string" column="businessReqFirstName" length="100" nullable="true"/>
+    <field name="businessreqlastname" type="string" column="businessReqLastName" length="100" nullable="true"/>
+    <field name="businessreqaddress1" type="string" column="businessReqAddress1" length="100" nullable="false"/>
+    <field name="businessreqaddress2" type="string" column="businessReqAddress2" length="100" nullable="true"/>
+    <field name="businessreqcity" type="string" column="businessReqCity" length="100" nullable="false"/>
+    <field name="businessreqcountryid" type="integer" column="businessReqCountryID" nullable="false"/>
+    <field name="businessreqstateid" type="integer" column="businessReqStateID" nullable="false"/>
+    <field name="businessreqprovince" type="string" column="businessReqProvince" length="50" nullable="false"/>
+    <field name="businessreqphone" type="string" column="businessReqPhone" length="20" nullable="true"/>
+    <field name="businessreqzip" type="string" column="businessReqZip" length="20" nullable="false"/>
+    <field name="businessreqemail" type="string" column="businessReqEmail" length="50" nullable="false"/>
+    <field name="businessreqwebsite" type="string" column="businessReqWebsite" length="450" nullable="false"/>
+    <field name="businessreqcomments" type="text" column="businessReqComments" nullable="true"/>
+    <field name="periodofbusiness" type="string" column="PeriodofBusiness" length="20" nullable="true"/>
+    <field name="hearabout" type="string" column="hearAbout" length="100" nullable="false"/>
+    <field name="businessrequestdate" type="datetime" column="businessRequestDate" nullable="false"/>
+    <field name="businessreqstatus" type="string" column="businessReqStatus" nullable="false"/>
+    <field name="requpdatedate" type="datetime" column="ReqUpdateDate" nullable="false"/>
+    <field name="businessreqdefaultlanguageid" type="integer" column="businessReqDefaultLanguageID" nullable="false"/>
+  </entity>
+</doctrine-mapping>

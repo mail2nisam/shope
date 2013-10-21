@@ -1,0 +1,6 @@
+_selectStates:
+    pattern:  /selectstates
+    defaults: { _controller: ApplicationuserBundle:Default:_selectStates }
+_security_check:
+    pattern: /loginFb
+    defaults: { _controller: ApplicationuserBundle:Default:loginCheck }

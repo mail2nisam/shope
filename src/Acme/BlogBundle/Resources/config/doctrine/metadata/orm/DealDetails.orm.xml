@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealDetails" table="deal_details">
+    <id name="dealdetailsid" type="integer" column="dealDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="dealtitle" type="string" column="dealTitle" length="511" nullable="false"/>
+    <field name="dealcertificatetitle" type="string" column="dealCertificateTitle" length="511" nullable="false"/>
+    <field name="dealfineprint" type="text" column="dealFinePrint" nullable="false"/>
+    <field name="dealhighlights" type="text" column="dealHighlights" nullable="false"/>
+    <field name="dealdescription" type="text" column="dealDescription" nullable="false"/>
+    <field name="dealreviews" type="text" column="dealReviews" nullable="false"/>
+    <field name="certificateinstructions" type="text" column="certificateInstructions" nullable="false"/>
+    <field name="dealmetatitle" type="text" column="dealMetaTitle" nullable="false"/>
+    <field name="dealmetadescription" type="text" column="dealMetaDescription" nullable="false"/>
+    <field name="dealmetakeywords" type="text" column="dealMetaKeywords" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealRequestImages" table="deal_request_images">
+    <id name="dealrequestimageid" type="integer" column="dealRequestImageID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealrequestid" type="integer" column="dealRequestID" nullable="false"/>
+    <field name="dealrequestimage" type="string" column="dealRequestImage" length="255" nullable="false"/>
+    <field name="dealrequestmagepriority" type="integer" column="dealRequestmagePriority" nullable="false"/>
+    <field name="dealrequestimagestatus" type="string" column="dealRequestImageStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

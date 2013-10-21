@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TaxClasses" table="tax_classes">
+    <id name="taxclassid" type="integer" column="taxClassID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="taxclassname" type="string" column="taxClassName" length="120" nullable="false"/>
+    <field name="taxclassdescription" type="string" column="taxClassDescription" length="200" nullable="false"/>
+    <field name="taxclassstatus" type="string" column="taxClassStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

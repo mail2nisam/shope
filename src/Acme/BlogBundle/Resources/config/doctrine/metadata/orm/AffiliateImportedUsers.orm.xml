@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliateImportedUsers" table="affiliate_imported_users">
+    <id name="userid" type="integer" column="userID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="bulkid" type="integer" column="bulkID" nullable="false"/>
+    <field name="useremail" type="string" column="userEmail" length="150" nullable="false"/>
+    <field name="userpassword" type="string" column="userPassword" length="255" nullable="false"/>
+    <field name="userfirstname" type="string" column="userFirstName" length="100" nullable="false"/>
+    <field name="userlastname" type="string" column="userLastName" length="100" nullable="false"/>
+    <field name="userphone" type="string" column="userPhone" length="25" nullable="false"/>
+    <field name="usercity" type="string" column="userCity" length="100" nullable="false"/>
+    <field name="useradress1" type="string" column="userAdress1" length="255" nullable="false"/>
+    <field name="useradress2" type="string" column="userAdress2" length="255" nullable="false"/>
+    <field name="userzip" type="string" column="userZip" length="12" nullable="false"/>
+    <field name="userconfirm" type="string" column="userConfirm" nullable="false"/>
+    <field name="confirmdate" type="datetime" column="confirmDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

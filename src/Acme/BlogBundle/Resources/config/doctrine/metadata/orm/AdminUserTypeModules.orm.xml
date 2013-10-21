@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdminUserTypeModules" table="admin_user_type_modules">
+    <id name="usertypemoduleid" type="bigint" column="userTypeModuleID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="usertypeid" type="integer" column="userTypeID" nullable="true"/>
+    <field name="adminmoduleid" type="integer" column="adminModuleID" nullable="true"/>
+  </entity>
+</doctrine-mapping>

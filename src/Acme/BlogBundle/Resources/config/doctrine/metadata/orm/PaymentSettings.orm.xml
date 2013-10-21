@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PaymentSettings" table="payment_settings">
+    <id name="paysetid" type="integer" column="paySetID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="paysetgroupid" type="integer" column="paySetGroupID" nullable="false"/>
+    <field name="paysetlabel" type="string" column="paySetLabel" length="200" nullable="false"/>
+    <field name="paysetkey" type="string" column="paySetKey" length="200" nullable="false"/>
+    <field name="paysettype" type="string" column="paySetType" length="200" nullable="false"/>
+    <field name="paysetoptions" type="text" column="paySetOptions" nullable="false"/>
+    <field name="paysetvalue" type="text" column="paySetValue" nullable="false"/>
+    <field name="paysetvalidate" type="string" column="paySetValidate" length="200" nullable="false"/>
+    <field name="paysetdescription" type="text" column="paySetDescription" nullable="false"/>
+    <field name="paysetsortorder" type="integer" column="paySetSortOrder" nullable="false"/>
+    <field name="paysetvalidateerror" type="string" column="paySetValidateError" length="500" nullable="true"/>
+    <field name="payfieldshow" type="string" column="payFieldShow" nullable="false"/>
+  </entity>
+</doctrine-mapping>

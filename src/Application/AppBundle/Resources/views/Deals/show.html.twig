@@ -1,0 +1,177 @@
+<h1>Deals</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Istaxable</th>
+            <td>{{ entity.istaxable }}</td>
+        </tr>
+        <tr>
+            <th>Taxclassid</th>
+            <td>{{ entity.taxclassid }}</td>
+        </tr>
+        <tr>
+            <th>Taxrate</th>
+            <td>{{ entity.taxrate }}</td>
+        </tr>
+        <tr>
+            <th>Dealkey</th>
+            <td>{{ entity.dealkey }}</td>
+        </tr>
+        <tr>
+            <th>Dealtitle</th>
+            <td>{{ entity.dealtitle }}</td>
+        </tr>
+        <tr>
+            <th>Dealcertificatetitle</th>
+            <td>{{ entity.dealcertificatetitle }}</td>
+        </tr>
+        <tr>
+            <th>Dealfineprint</th>
+            <td>{{ entity.dealfineprint }}</td>
+        </tr>
+        <tr>
+            <th>Dealhighlights</th>
+            <td>{{ entity.dealhighlights }}</td>
+        </tr>
+        <tr>
+            <th>Dealdescription</th>
+            <td>{{ entity.dealdescription }}</td>
+        </tr>
+        <tr>
+            <th>Dealreviews</th>
+            <td>{{ entity.dealreviews }}</td>
+        </tr>
+        <tr>
+            <th>Certificateinstructions</th>
+            <td>{{ entity.certificateinstructions }}</td>
+        </tr>
+        <tr>
+            <th>Dealmetatitle</th>
+            <td>{{ entity.dealmetatitle }}</td>
+        </tr>
+        <tr>
+            <th>Dealmetadescription</th>
+            <td>{{ entity.dealmetadescription }}</td>
+        </tr>
+        <tr>
+            <th>Dealmetakeywords</th>
+            <td>{{ entity.dealmetakeywords }}</td>
+        </tr>
+        <tr>
+            <th>Dealbusinesslocations</th>
+            <td>{{ entity.dealbusinesslocations }}</td>
+        </tr>
+        <tr>
+            <th>Dealtimezone</th>
+            <td>{{ entity.dealtimezone }}</td>
+        </tr>
+        <tr>
+            <th>Dealstarttime</th>
+            <td>{{ entity.dealstarttime|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Dealendtime</th>
+            <td>{{ entity.dealendtime|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Dealminbuylimit</th>
+            <td>{{ entity.dealminbuylimit }}</td>
+        </tr>
+        <tr>
+            <th>Dealmaxgiftbuy</th>
+            <td>{{ entity.dealmaxgiftbuy }}</td>
+        </tr>
+        <tr>
+            <th>Dealmaxbuylimit</th>
+            <td>{{ entity.dealmaxbuylimit }}</td>
+        </tr>
+        <tr>
+            <th>Dealminqntyreqtotipp</th>
+            <td>{{ entity.dealminqntyreqtotipp }}</td>
+        </tr>
+        <tr>
+            <th>Dealexpirydate</th>
+            <td>{{ entity.dealexpirydate|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Dealcommissionrate</th>
+            <td>{{ entity.dealcommissionrate }}</td>
+        </tr>
+        <tr>
+            <th>Dealuseglobalcommision</th>
+            <td>{{ entity.dealuseglobalcommision }}</td>
+        </tr>
+        <tr>
+            <th>Dealcommissiontype</th>
+            <td>{{ entity.dealcommissiontype }}</td>
+        </tr>
+        <tr>
+            <th>Dealservicefee</th>
+            <td>{{ entity.dealservicefee }}</td>
+        </tr>
+        <tr>
+            <th>Dealshownosbought</th>
+            <td>{{ entity.dealshownosbought }}</td>
+        </tr>
+        <tr>
+            <th>Dealshowdealtipped</th>
+            <td>{{ entity.dealshowdealtipped }}</td>
+        </tr>
+        <tr>
+            <th>Dealonlineredemption</th>
+            <td>{{ entity.dealonlineredemption }}</td>
+        </tr>
+        <tr>
+            <th>Dealimage</th>
+            <td>{{ entity.dealimage }}</td>
+        </tr>
+        <tr>
+            <th>Dealpriority</th>
+            <td>{{ entity.dealpriority }}</td>
+        </tr>
+        <tr>
+            <th>Dealstatus</th>
+            <td>{{ entity.dealstatus }}</td>
+        </tr>
+        <tr>
+            <th>Inventorytracklevel</th>
+            <td>{{ entity.inventorytracklevel }}</td>
+        </tr>
+        <tr>
+            <th>Dealcreateddate</th>
+            <td>{{ entity.dealcreateddate|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Dealtippeddate</th>
+            <td>{{ entity.dealtippeddate|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Shippingstatus</th>
+            <td>{{ entity.shippingstatus }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('product') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('product_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('product_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

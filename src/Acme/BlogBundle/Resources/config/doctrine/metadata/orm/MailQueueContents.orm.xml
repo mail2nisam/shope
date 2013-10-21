@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MailQueueContents" table="mail_queue_contents">
+    <id name="mailqueueid" type="integer" column="mailQueueID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="referringid" type="integer" column="referringID" nullable="false"/>
+    <field name="mailsubject" type="string" column="mailSubject" length="255" nullable="false"/>
+    <field name="mailfromname" type="string" column="mailFromName" length="255" nullable="false"/>
+    <field name="mailfromemail" type="string" column="mailFromEmail" length="255" nullable="false"/>
+    <field name="mailcontent" type="text" column="mailContent" nullable="false"/>
+    <field name="totalemailcount" type="integer" column="totalEmailCount" nullable="false"/>
+    <field name="totalremainingcount" type="integer" column="totalRemainingCount" nullable="false"/>
+    <field name="mailtype" type="string" column="mailType" length="255" nullable="false"/>
+    <field name="mailscheduledtime" type="datetime" column="mailScheduledTime" nullable="false"/>
+    <field name="mailqueuestatus" type="string" column="mailQueueStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

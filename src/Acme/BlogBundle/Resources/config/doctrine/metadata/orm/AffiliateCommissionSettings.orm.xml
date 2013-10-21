@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliateCommissionSettings" table="affiliate_commission_settings">
+    <id name="affcommsettingsid" type="integer" column="affCommSettingsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="false"/>
+    <field name="enablesalescommission" type="string" column="enableSalesCommission" nullable="false"/>
+    <field name="firstpurchasecommissiontype" type="string" column="firstPurchaseCommissionType" nullable="false"/>
+    <field name="firstpurchasecommissionvalue" type="decimal" column="firstPurchaseCommissionValue" nullable="false"/>
+    <field name="recurringpurchasecommissiontype" type="string" column="recurringPurchaseCommissionType" nullable="false"/>
+    <field name="recurringpurchasecommissionvalue" type="decimal" column="recurringPurchaseCommissionValue" nullable="false"/>
+    <field name="enabletiercommission" type="string" column="enableTierCommission" nullable="false"/>
+    <field name="tiercommissionlevel" type="integer" column="tierCommissionLevel" nullable="false"/>
+    <field name="tiercommissiontype" type="string" column="tierCommissionType" nullable="false"/>
+    <field name="tiercommissionvalue" type="decimal" column="tierCommissionValue" nullable="false"/>
+    <field name="subscriptioncommission" type="string" column="subscriptionCommission" nullable="false"/>
+    <field name="subscriptioncommissionamount" type="decimal" column="subscriptionCommissionAmount" nullable="false"/>
+    <field name="registrationcommission" type="string" column="registrationCommission" nullable="false"/>
+    <field name="registrationcommissionamount" type="decimal" column="registrationCommissionAmount" nullable="false"/>
+    <field name="bulksubscriberimport" type="string" column="bulkSubscriberImport" nullable="false"/>
+    <field name="bulksubscriberimportcommission" type="decimal" column="bulkSubscriberImportCommission" nullable="false"/>
+    <field name="bulkuserimport" type="string" column="bulkUserImport" nullable="false"/>
+    <field name="bulkuserimportcommission" type="decimal" column="bulkUserImportCommission" nullable="false"/>
+  </entity>
+</doctrine-mapping>

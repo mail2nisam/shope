@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UsersReferrals" table="users_referrals">
+    <id name="referrerid" type="bigint" column="referrerID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="referedby" type="integer" column="referedBY" nullable="false"/>
+    <field name="referedto" type="integer" column="referedTo" nullable="false"/>
+    <field name="purchasestatus" type="string" column="purchaseStatus" nullable="false"/>
+    <field name="referralamount" type="decimal" column="referralAmount" nullable="false"/>
+    <field name="referralstatus" type="string" column="referralStatus" nullable="false"/>
+    <field name="referalregactivedate" type="datetime" column="referalRegActiveDate" nullable="true"/>
+    <field name="lastactdate" type="datetime" column="LastActDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

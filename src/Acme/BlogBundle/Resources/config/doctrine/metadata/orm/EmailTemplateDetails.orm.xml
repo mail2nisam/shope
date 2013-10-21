@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EmailTemplateDetails" table="email_template_details">
+    <id name="emailtempdetid" type="integer" column="emailTempDetID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="emailtempid" type="integer" column="emailTempID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="emailsubject" type="string" column="emailSubject" length="255" nullable="false"/>
+    <field name="emailhtml" type="text" column="emailHtml" nullable="false"/>
+    <field name="emailtext" type="text" column="emailText" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,109 @@
+Application\AppBundle\Entity\Users:
+    type: entity
+    table: users
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        facebookId:
+            type: string
+            length: 255
+        userfirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userFirstName
+        userlastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userLastName
+        userphone:
+            type: string
+            length: 25
+            fixed: false
+            nullable: true
+            column: userPhone
+        useradress1:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: userAdress1
+        useradress2:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: userAdress2
+        usercity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userCity
+        userprovince:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userProvince
+        userzip:
+            type: string
+            length: 10
+            fixed: false
+            nullable: true
+            column: userZip
+        userreferralid:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userReferralID
+        userprofilepicture:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: userProfilePicture
+        userdob:
+            type: date
+            nullable: true
+            column: userDOB
+        usergender:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+            column: userGender
+        usernewslettersubscribestatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+            column: userNewsletterSubscribeStatus
+    manyToOne:
+        countryid:
+            targetEntity: Countries
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                countryID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        stateid:
+            targetEntity: States
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stateID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

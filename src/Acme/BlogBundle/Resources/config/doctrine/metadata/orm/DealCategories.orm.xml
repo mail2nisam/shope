@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealCategories" table="deal_categories">
+    <id name="dealcategoryid" type="integer" column="dealCategoryID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealcategorykey" type="string" column="dealCategoryKey" length="200" nullable="false"/>
+    <field name="dealcategoryparent" type="integer" column="dealCategoryParent" nullable="false"/>
+    <field name="dealcategorystatus" type="string" column="dealCategoryStatus" nullable="false"/>
+    <field name="dealcategorysortorder" type="integer" column="dealCategorySortOrder" nullable="false"/>
+    <field name="dealcategoryimage" type="string" column="dealCategoryImage" length="300" nullable="false"/>
+  </entity>
+</doctrine-mapping>

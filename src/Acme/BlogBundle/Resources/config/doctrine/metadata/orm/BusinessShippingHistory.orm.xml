@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessShippingHistory" table="business_shipping_history">
+    <id name="shippingid" type="bigint" column="shippingID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="activitydate" type="datetime" column="activityDate" nullable="false"/>
+    <field name="comment" type="text" column="comment" nullable="false"/>
+    <field name="notifycustomer" type="string" column="notifyCustomer" nullable="false"/>
+    <field name="orderid" type="bigint" column="orderID" nullable="false"/>
+    <field name="shippingstatus" type="string" column="shippingStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

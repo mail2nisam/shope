@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliateWidgetDetails" table="affiliate_widget_details">
+    <id name="affiliatewidgetdetailid" type="integer" column="affiliateWidgetDetailID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="widgetname" type="string" column="widgetName" length="100" nullable="false"/>
+    <field name="widgetdealcategories" type="text" column="widgetDealCategories" nullable="false"/>
+    <field name="widgetcities" type="text" column="widgetCities" nullable="false"/>
+    <field name="widgettype" type="string" column="widgetType" nullable="false"/>
+    <field name="affiliatedealsizeid" type="string" column="affiliateDealSizeID" length="50" nullable="false"/>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="true"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="affiliatewidgetcontenttype" type="string" column="affiliateWidgetContentType" nullable="false"/>
+    <field name="widgetcolors" type="text" column="widgetColors" nullable="false"/>
+    <field name="affiliatewidgetcreateddate" type="datetime" column="affiliateWidgetCreatedDate" nullable="false"/>
+    <field name="affiliatewidgetotherdealtypes" type="string" column="affiliateWidgetOtherDealTypes" length="50" nullable="false"/>
+    <field name="widgetscrolling" type="string" column="widgetScrolling" nullable="false"/>
+    <field name="widgetFormat" type="string" column="widget_format" nullable="false"/>
+    <field name="widgetstatus" type="string" column="widgetStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

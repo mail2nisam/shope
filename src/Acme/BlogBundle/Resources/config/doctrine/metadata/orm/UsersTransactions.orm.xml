@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UsersTransactions" table="users_transactions">
+    <id name="usertransactionid" type="integer" column="userTransactionID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="transactiontype" type="string" column="transactionType" nullable="false"/>
+    <field name="transactiondate" type="datetime" column="transactionDate" nullable="false"/>
+    <field name="transactionamount" type="decimal" column="transactionAmount" nullable="false"/>
+    <field name="transactiondescription" type="text" column="transactionDescription" nullable="true"/>
+    <field name="transactionstatus" type="string" column="transactionStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

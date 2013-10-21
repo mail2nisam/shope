@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Cities" table="cities">
+    <id name="cityid" type="integer" column="cityID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="countryid" type="integer" column="countryID" nullable="false"/>
+    <field name="stateid" type="integer" column="stateID" nullable="false"/>
+    <field name="timezoneid" type="integer" column="timeZoneID" nullable="false"/>
+    <field name="citykeyid" type="string" column="cityKeyID" length="100" nullable="false"/>
+    <field name="citylat" type="string" column="cityLat" length="25" nullable="false"/>
+    <field name="citylng" type="string" column="cityLng" length="25" nullable="false"/>
+    <field name="citylogoimage" type="string" column="citylogoImage" length="250" nullable="false"/>
+    <field name="citybgimage" type="string" column="citybgImage" length="250" nullable="false"/>
+    <field name="citystatus" type="string" column="cityStatus" nullable="false"/>
+    <field name="citycampaignlistid" type="string" column="cityCampaignListID" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

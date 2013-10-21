@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CalendarCampaign" table="calendar_campaign">
+    <id name="campaignid" type="integer" column="campaignID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealid" type="integer" column="dealID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="bannerdesignid" type="integer" column="bannerDesignID" nullable="false"/>
+    <field name="bannername" type="string" column="bannerName" length="100" nullable="false"/>
+    <field name="campaignstartdate" type="date" column="campaignStartDate" nullable="false"/>
+    <field name="campaignenddate" type="date" column="campaignEndDate" nullable="false"/>
+    <field name="campaignstatus" type="string" column="campaignStatus" nullable="false"/>
+    <field name="campaignmodifieddate" type="datetime" column="campaignModifiedDate" nullable="false"/>
+    <field name="campaigncreateddate" type="datetime" column="campaignCreatedDate" nullable="false"/>
+    <field name="destinationurl" type="string" column="destinationUrl" length="100" nullable="false"/>
+  </entity>
+</doctrine-mapping>

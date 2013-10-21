@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Subscribers" table="subscribers">
+    <id name="subscid" type="integer" column="subscID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="subscemailid" type="string" column="subscEmailID" length="255" nullable="false"/>
+    <field name="userid" type="integer" column="userID" nullable="false"/>
+    <field name="contactphone" type="string" column="contactPhone" length="20" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AffiliatePerformance" table="affiliate_performance">
+    <id name="affperformanceid" type="integer" column="affPerformanceID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="affvisitorid" type="integer" column="affVisitorID" nullable="false"/>
+    <field name="affiliateuserid" type="integer" column="affiliateUserID" nullable="false"/>
+    <field name="actionid" type="integer" column="actionID" nullable="false"/>
+    <field name="type" type="string" column="type" nullable="false"/>
+    <field name="createddate" type="datetime" column="createdDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>

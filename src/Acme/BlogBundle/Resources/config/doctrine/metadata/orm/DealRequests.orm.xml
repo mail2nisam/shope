@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealRequests" table="deal_requests">
+    <id name="dealrequestid" type="integer" column="dealRequestID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealtypeid" type="integer" column="dealTypeID" nullable="false"/>
+    <field name="businessid" type="integer" column="businessID" nullable="false"/>
+    <field name="dealrequestkey" type="string" column="dealRequestKey" length="255" nullable="false"/>
+    <field name="dealrequestbusinesslocations" type="string" column="dealRequestBusinessLocations" length="255" nullable="false"/>
+    <field name="dealrequesttimezone" type="integer" column="dealRequestTimeZone" nullable="false"/>
+    <field name="dealrequeststarttime" type="datetime" column="dealRequestStartTime" nullable="false"/>
+    <field name="dealrequestendtime" type="datetime" column="dealRequestEndTime" nullable="false"/>
+    <field name="dealrequestminbuylimit" type="integer" column="dealRequestMinBuyLimit" nullable="false"/>
+    <field name="dealrequestmaxbuylimit" type="integer" column="dealRequestMaxBuyLimit" nullable="true"/>
+    <field name="dealrequestminqntyreqtotipp" type="integer" column="dealRequestMinQntyReqToTipp" nullable="false"/>
+    <field name="dealrequestexpirydate" type="datetime" column="dealRequestExpiryDate" nullable="true"/>
+    <field name="dealrequestshownosbought" type="string" column="dealRequestShowNosBought" nullable="false"/>
+    <field name="dealrequestshowdealtipped" type="string" column="dealRequestShowDealTipped" nullable="false"/>
+    <field name="dealrequestonlineredemption" type="string" column="dealRequestOnlineRedemption" nullable="false"/>
+    <field name="dealrequestimage" type="string" column="dealRequestImage" length="255" nullable="false"/>
+    <field name="dealrequestdate" type="datetime" column="dealRequestDate" nullable="false"/>
+    <field name="dealrequeststatus" type="string" column="dealRequestStatus" nullable="false"/>
+    <field name="dealrequestmaxgiftbuy" type="integer" column="dealRequestMaxGiftBuy" nullable="true"/>
+    <field name="shippingstatus" type="string" column="shippingStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

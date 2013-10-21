@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DealRequestOptionDetails" table="deal_request_option_details">
+    <id name="dealrequestoptiondetailsid" type="integer" column="dealRequestOptionDetailsID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dealrequestoptionid" type="integer" column="dealRequestOptionID" nullable="false"/>
+    <field name="languageid" type="integer" column="languageID" nullable="false"/>
+    <field name="dealrequestoptionname" type="string" column="dealRequestOptionName" length="255" nullable="false"/>
+    <field name="dealrequestoptioncerttitle" type="string" column="dealRequestOptionCertTitle" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

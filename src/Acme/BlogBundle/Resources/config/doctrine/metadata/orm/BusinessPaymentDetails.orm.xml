@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BusinessPaymentDetails" table="business_payment_details">
+    <id name="paydetailid" type="integer" column="payDetailID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="businesstransid" type="integer" column="businessTransID" nullable="false"/>
+    <field name="orderid" type="integer" column="orderID" nullable="false"/>
+    <field name="paymenttotal" type="decimal" column="paymentTotal" nullable="false"/>
+    <field name="paidcommission" type="decimal" column="paidCommission" nullable="false"/>
+    <field name="paidservicefee" type="decimal" column="paidServiceFee" nullable="false"/>
+    <field name="paidcccharges" type="decimal" column="paidCcCharges" nullable="false"/>
+    <field name="paidotherdeduction" type="decimal" column="paidOtherDeduction" nullable="false"/>
+    <field name="paidamount" type="decimal" column="paidAmount" nullable="false"/>
+    <field name="updateddate" type="datetime" column="updatedDate" nullable="false"/>
+    <field name="transactionstatus" type="string" column="transactionStatus" nullable="false"/>
+  </entity>
+</doctrine-mapping>

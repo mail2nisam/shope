@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PaymentAcceptedCc" table="payment_accepted_cc">
+    <id name="cardtypeid" type="integer" column="cardTypeID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cardtypecode" type="string" column="cardTypeCode" length="50" nullable="false"/>
+    <field name="cardtype" type="string" column="cardType" length="100" nullable="false"/>
+    <field name="enablecvv2" type="string" column="enableCVV2" nullable="false"/>
+    <field name="status" type="string" column="status" nullable="true"/>
+  </entity>
+</doctrine-mapping>
